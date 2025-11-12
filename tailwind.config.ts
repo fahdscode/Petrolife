@@ -22,6 +22,11 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          blue: "#5A66C1",
+          purple: "#6C32A9",
+          orange: "#E76500",
+          green: "#00C950",
+          red: "#EE3939",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,15 +52,26 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        surface: {
+          dark: "#12171C",
+          screen: "#FFF",
+        },
+        text: {
+          primary: "#223548",
+          secondary: "#5B738B",
+          placeholder: "#A9B4BE",
+          green: "#00C950",
+          blue: "#5A66C1",
+          negative: "#FFF",
+        },
+        brand: {
+          orange: {
+            DEFAULT: "#E76500",
+            dark: "#A93E00",
+            darker: "#8D2A00",
+          },
+          teal: "#012931",
+          yellow: "#FFFA68",
         },
       },
       borderRadius: {
