@@ -148,7 +148,7 @@ export default function Index() {
       <section className="py-12 px-4 bg-background relative overflow-hidden">
         <div className="max-w-[1064px] mx-auto flex flex-col items-center gap-7">
           <div className="flex flex-col items-center gap-4 max-w-[714px]">
-            <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
+            <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
               <span className="text-text-primary text-base font-bold leading-6 opacity-60">
                 أحصائياتنا
               </span>
@@ -367,7 +367,7 @@ export default function Index() {
         <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-8 max-w-[1096px]">
             <div className="flex flex-col items-center gap-4">
-              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
+              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
                   خدماتنــــــــــا
                 </span>
@@ -598,7 +598,7 @@ export default function Index() {
         <div className="max-w-[1196px] mx-auto px-4 flex flex-col items-center gap-10 relative z-10">
           <div className="flex flex-col items-center gap-7 text-center">
             <h2 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
-              حمّل تطبيقاتنا واستمتع بتجربة لا مثيل لها
+              حمّل تطبيقاتنا واستمتع بتجرب�� لا مثيل لها
             </h2>
 
             <div className="flex flex-wrap items-center justify-center gap-3.5">
@@ -794,7 +794,7 @@ export default function Index() {
       <section className="py-16 px-4 md:px-[230px] bg-background">
         <div className="max-w-[980px] mx-auto flex flex-col items-center gap-14">
           <div className="flex flex-col items-center gap-7 max-w-[755px]">
-            <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
+            <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
               <span className="text-text-primary text-base font-bold leading-6 opacity-60">
                 FAQ
               </span>
