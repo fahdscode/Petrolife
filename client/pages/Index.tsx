@@ -24,7 +24,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
+                النظام التقني الشامل والمتكامل في إ��ارة إستهلاك الوقود
               </span>
             </div>
 
@@ -226,9 +226,9 @@ export default function Index() {
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col items-end gap-10 text-right order-2 md:order-1">
             <div className="flex flex-col items-end gap-7">
-              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
+              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px] ml-auto">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
-                  من نحن؟
+                  من ��حن؟
                 </span>
               </div>
 
@@ -245,7 +245,7 @@ export default function Index() {
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
                   نؤمن أن إدارة الوقود ليست مجرد متابعة أرقام، بل هي أداة
-                  استراتيجية لإدارة الموارد بكفاءة، تقليل الهدر، و��عزيز الاستدامة.
+                  استراتيجية لإدارة الموارد بكفاءة، تقليل الهدر، وتعزيز الاستدامة.
                   ولذلك، نوفر نظامًا متطورًا يجمع بين السهولة، الدقة، والشفافية،
                   ليناسب مختلف أحجام الأعمال من الشركات الصغيرة إلى أساطيل النقل
                   الكبرى.
@@ -258,7 +258,7 @@ export default function Index() {
               </div>
             </div>
 
-            <button className="flex h-14 px-4 pr-1.5 items-center gap-3 rounded-full border border-primary-blue">
+            <button className="flex h-14 px-4 pr-1.5 items-center gap-3 rounded-full border border-primary-blue justify-start ml-auto">
               <div className="w-11 h-11 rounded-full bg-[#0D3E64]/8 flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
@@ -394,6 +394,7 @@ export default function Index() {
                       : "bg-primary-blue/8"
                   }`}
                 >
+                  <span className="text-2xl">{service.icon}</span>
                   <span
                     className={`text-lg font-extrabold leading-6 ${
                       activeService === service.id
@@ -403,7 +404,6 @@ export default function Index() {
                   >
                     {service.label}
                   </span>
-                  <span className="text-2xl">{service.icon}</span>
                 </button>
               ))}
             </div>
@@ -480,10 +480,10 @@ export default function Index() {
                 key={index}
                 className="flex items-center gap-1 justify-center"
               >
+                <span className="text-xl">✓</span>
                 <span className="text-white text-lg font-medium leading-[35px]">
                   {feature}
                 </span>
-                <span className="text-xl">✓</span>
               </div>
             ))}
           </div>
@@ -521,7 +521,7 @@ export default function Index() {
             {[
               {
                 q: "1. كيف يمكنني طلب خدمة من بترولايف؟",
-                a: "يمكنك طلب الخدمة بعدة طرق: تطبيق بترولايف للهواتف الذكية ، الموقع الإلكتروني ، ا��اتصال المباشر ، واتساب",
+                a: "يمكنك طلب الخدمة بعدة طرق: تطبيق بترولايف للهواتف الذكية ، الموقع الإلكتروني ، الاتصال المباشر ، واتساب",
               },
               { q: "2. كم يستغرق وصول الخدمة؟", a: "" },
               { q: "3. هل الأسعار منافسة مقارنة بالطرق التقليدية؟", a: "" },
@@ -644,14 +644,8 @@ export default function Index() {
       <section className="py-[136px] px-4 md:px-40 bg-white">
         <div className="max-w-full flex flex-col gap-15">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-15">
-            <p className="max-w-[491px] text-text-primary text-base leading-6 opacity-50 text-right">
-              يسعدنا دائمًا أن نستمع إليك! هل لديك سؤال؟ أو فكرة ترغب في طرحها؟
-              لا تتردد أبدًا في مراسلتنا عبر الإيميل أو الواتساب. نحن نؤمن بأن
-              التواصل الفعّال هو أساس الشراكة الناجحة.
-            </p>
-
             <div className="flex flex-col items-end gap-7">
-              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
+              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px] ml-auto">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
                   تواصل معنا
                 </span>
@@ -660,6 +654,11 @@ export default function Index() {
                 تواصل معنا - نحن هنا لمساعدتك!
               </h2>
             </div>
+            <p className="max-w-[491px] text-text-primary text-base leading-6 opacity-50 text-right">
+              يسعدنا دائمًا أ�� نستمع إليك! هل لديك سؤال؟ أو فكرة ترغب في طرحها؟
+              لا تتردد أبدًا في مراسلتنا عبر الإيميل أو الواتساب. نحن نؤمن بأن
+              التواصل الفعّال هو أساس الشراكة الناجحة.
+            </p>
           </div>
 
           <div className="p-10 rounded-3xl bg-white/4 shadow-[10px_10px_50px_rgba(0,0,0,0.1)]">
