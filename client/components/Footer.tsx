@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-white py-8 px-4 md:px-[120px]">
+    <footer className="bg-background py-8 px-4 md:px-[120px]">
       <div className="max-w-[1200px] mx-auto">
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-10">
