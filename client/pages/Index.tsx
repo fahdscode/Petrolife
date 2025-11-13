@@ -46,7 +46,7 @@ export default function Index() {
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <button className="flex h-14 px-4 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50">
               <span className="text-white text-base font-bold leading-6 px-3">
-                اطلب خدمة عاجلة
+                اطلب خدم�� عاجلة
               </span>
               <svg
                 className="w-[18px] h-[18px]"
@@ -245,9 +245,9 @@ export default function Index() {
                   واتخاذ قرارات أكثر وعيًا وفاعلية.
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
-                  نؤمن أن إد��رة الوقود ليست مجرد متابعة أرقام، بل هي أداة
+                  نؤمن أن إدارة الوقود ليست مجرد متابعة أرقام، بل هي أداة
                   استراتيجية لإدارة الموارد بكفاءة، تقليل الهدر، وتعزيز الاستدامة.
-                  ولذلك، نوفر نظامًا متطورًا يجمع بين السهولة، الدقة، والشفافية،
+                  ��لذلك، نوفر نظامًا متطورًا يجمع بين السهولة، الدقة، والشفافية،
                   ليناسب مختلف أحجام الأعمال من الشركات الصغيرة إلى أساطيل النقل
                   الكبرى.
                 </p>
@@ -324,7 +324,7 @@ export default function Index() {
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
               التلاعب.
               <br />
-              <span className="font-medium">الموثوقية</span>: تقديم خدمات موثوقة تضمن
+              <span className="font-medium">الموثوقية</span>: ��قديم خدمات موثوقة تضمن
               رضا العملاء واستمرارية العمليات.
               <br />
               <span className="font-medium">الاحترافية</span>: التزام أعلى معايير
@@ -478,50 +478,142 @@ export default function Index() {
             </h2>
 
             <div className="flex flex-wrap items-center justify-center gap-3.5">
-              {[
-                "بترولايف للأفراد",
-                "بترولايف للشركات",
-                "بترولايف لمزودي الخدمة",
-              ].map((app, index) => (
-                <button
-                  key={index}
-                  className={`flex h-[52px] px-4 justify-center items-center gap-2.5 rounded-lg transition-all ${
-                    index === 0
-                      ? "bg-primary-blue"
-                      : "bg-primary-blue/8"
+              <button
+                onClick={() => setActiveAppTab("providers")}
+                className={`flex h-[52px] px-4 justify-center items-center gap-2.5 rounded-lg transition-all ${
+                  activeAppTab === "providers"
+                    ? "bg-primary-blue"
+                    : "bg-primary-blue/8"
+                }`}
+              >
+                <span
+                  className={`text-lg font-extrabold leading-6 ${
+                    activeAppTab === "providers" ? "text-white" : "text-white opacity-80"
                   }`}
                 >
-                  <span
-                    className={`text-lg font-extrabold leading-6 ${
-                      index === 0 ? "text-white" : "text-white opacity-80"
-                    }`}
-                  >
-                    {app}
-                  </span>
-                </button>
-              ))}
+                  بترولايف لمزودي الخدمة
+                </span>
+              </button>
+              <button
+                onClick={() => setActiveAppTab("companies")}
+                className={`flex h-[52px] px-4 justify-center items-center gap-2.5 rounded-lg transition-all ${
+                  activeAppTab === "companies"
+                    ? "bg-primary-blue"
+                    : "bg-primary-blue/8"
+                }`}
+              >
+                <span
+                  className={`text-lg font-extrabold leading-6 ${
+                    activeAppTab === "companies" ? "text-white" : "text-white opacity-80"
+                  }`}
+                >
+                  بترولايف للشركات
+                </span>
+              </button>
+              <button
+                onClick={() => setActiveAppTab("individuals")}
+                className={`flex h-[52px] px-4 justify-center items-center gap-2.5 rounded-lg transition-all ${
+                  activeAppTab === "individuals"
+                    ? "bg-primary-blue"
+                    : "bg-primary-blue/8"
+                }`}
+              >
+                <span
+                  className={`text-lg font-extrabold leading-6 ${
+                    activeAppTab === "individuals" ? "text-white" : "text-white opacity-80"
+                  }`}
+                >
+                  بترولايف للأفراد
+                </span>
+              </button>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            {[
-              { text: "واجهة سهلة و متجاوبة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/1f5d56a2a691101aae2481f9322df779fe8895b3?width=48" },
-              { text: "طلب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
-              { text: "تتبع الطلب لحظة بلحظة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4d70ee1fd880c733997472e7c1c1e3f574662593?width=48" },
-              { text: "نظام دفع آمن ومرن", icon: "https://api.builder.io/api/v1/image/assets/TEMP/5c93a2890b7beb7220236eb2ca1430403356534e?width=48" },
-              { text: "عروض وخصومات حصرية", icon: "https://api.builder.io/api/v1/image/assets/TEMP/436398af1f391fccd11d3b37d564a743a96a45eb?width=48" },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-1 justify-center"
-              >
-                <span className="text-white text-lg font-medium leading-[35px]">
-                  {feature.text}
-                </span>
-                <img src={feature.icon} alt="" className="w-6 h-6" />
+          {/* Features based on active tab */}
+          {activeAppTab === "individuals" && (
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              {[
+                { text: "واجهة سهلة و متجاوبة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/1f5d56a2a691101aae2481f9322df779fe8895b3?width=48" },
+                { text: "طلب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
+                { text: "تتبع الطلب لحظة بلحظة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4d70ee1fd880c733997472e7c1c1e3f574662593?width=48" },
+                { text: "نظام دفع آمن ومرن", icon: "https://api.builder.io/api/v1/image/assets/TEMP/5c93a2890b7beb7220236eb2ca1430403356534e?width=48" },
+                { text: "عروض وخصومات حصرية", icon: "https://api.builder.io/api/v1/image/assets/TEMP/436398af1f391fccd11d3b37d564a743a96a45eb?width=48" },
+              ].map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-1 justify-center"
+                >
+                  <span className="text-white text-lg font-medium leading-[35px]">
+                    {feature.text}
+                  </span>
+                  <img src={feature.icon} alt="" className="w-6 h-6" />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {activeAppTab === "companies" && (
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex flex-wrap items-center justify-center gap-8">
+                {[
+                  { text: "خصومات خاصة للشركات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/436398af1f391fccd11d3b37d564a743a96a45eb?width=48" },
+                  { text: "فواتير موحدة وشاملة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/62b091a295c7a736d9eb12b6e9fa953a313c4d4e?width=48" },
+                  { text: "تقارير تفصيلية عن الاستهلاك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4075f995c99a51e3cc4dfde1a3b4041e57ca8564?width=48" },
+                  { text: "إدارة شاملة لأساطيل الشركات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f468e3ca40695b28b82d809dc53e3ba90d1d7471?width=48" },
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-1 justify-center"
+                  >
+                    <span className="text-white text-lg font-medium leading-[35px]">
+                      {feature.text}
+                    </span>
+                    <img src={feature.icon} alt="" className="w-6 h-6" />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+              <div className="flex flex-wrap items-center justify-center gap-8">
+                {[
+                  { text: "تسجيل قائدو المركبات بالتطبيقات الخاصة بهم", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4658c12111615a9ba897d2567b4cefc9918bf878?width=48" },
+                  { text: "دعم فني متخصص", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
+                  { text: "أولوية في الخدمة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/ba9fd6ecd9faf5c23a8a6f7764e27e4f88e0e522?width=48" },
+                ].map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-1 justify-center"
+                  >
+                    <span className="text-white text-lg font-medium leading-[35px]">
+                      {feature.text}
+                    </span>
+                    <img src={feature.icon} alt="" className="w-6 h-6" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {activeAppTab === "providers" && (
+            <div className="flex flex-wrap items-center justify-center gap-8">
+              {[
+                { text: "نمو مستدام لأعمالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
+                { text: "دعم تقني شامل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
+                { text: "تدريب وتأهيل مستمر", icon: "https://api.builder.io/api/v1/image/assets/TEMP/ef59665d154a72f339a582e4618f56dc77da79b9?width=48" },
+                { text: "مدفوعات سريعة وآمنة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/410f0abd96be385b1da9c655977bd001697ae4a0?width=48" },
+                { text: "نظام إدارة الطلبات الذكي", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f468e3ca40695b28b82d809dc53e3ba90d1d7471?width=48" },
+                { text: "رفع مستوى المبيعات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/a19d228795dbea75376e3d87f17757184b50e369?width=48" },
+              ].map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-1 justify-center"
+                >
+                  <span className="text-white text-lg font-medium leading-[35px]">
+                    {feature.text}
+                  </span>
+                  <img src={feature.icon} alt="" className="w-6 h-6" />
+                </div>
+              ))}
+            </div>
+          )}
 
           <div className="flex items-center gap-4 h-[52px] flex-wrap justify-center">
             <svg
