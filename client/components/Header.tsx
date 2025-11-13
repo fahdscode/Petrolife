@@ -156,7 +156,7 @@ export default function Header() {
                 />
               </svg>
               <span className="text-white text-base font-bold leading-6">
-                حمل التطبيق الآ��
+                حمل التطبيق الآن
               </span>
             </button>
           </div>
