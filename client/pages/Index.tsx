@@ -25,7 +25,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوق��د
+                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
               </span>
             </div>
 
@@ -158,7 +158,7 @@ export default function Index() {
             </h2>
           </div>
 
-          <div className="w-full p-10 md:p-14 rounded-3xl border border-white/10 bg-gradient-to-br from-[#F5F5F5]/50 to-[#FAFAFA]/40">
+          <div className="w-full p-10 md:p-14 rounded-3xl border border-foreground/10 bg-gradient-to-br from-background/50 to-background/40 dark:from-background/80 dark:to-background/60">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {[
                 {
@@ -319,7 +319,7 @@ export default function Index() {
               وتقارير واضحة لدعم اتخاذ القرار.
               <br />
               <span className="font-medium">الابتكار</span>: تطوير حلول تقنية متقدمة
-              تلبي احتياجات العملاء المتغيرة.
+              تل��ي احتياجات العملاء المتغيرة.
               <br />
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
               التلاعب.
