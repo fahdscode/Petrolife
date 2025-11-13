@@ -154,7 +154,7 @@ export default function Index() {
               </span>
             </div>
             <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
-              أرقام تتحدث عن ث��تكم بنا
+              أرقام تتحدث عن ثقتكم بنا
             </h2>
           </div>
 
@@ -240,7 +240,7 @@ export default function Index() {
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
                   بترولايف منصة متخصصة في إدارة وتتبع استهلاك الوقود، صُممت لتلبية
                   احتياجات الشركات والمؤسسات التي تسعى إلى رفع كفاءتها التشغيلية
-                  وتقليل نفقاتها. نعمل ع��ى تقديم حلول تقنية مبتكرة تساعد عملائنا
+                  وتقليل نفقاتها. نعمل على تقديم حلول تقنية مبتكرة تساعد عملائنا
                   على مراقبة استهلاك الوقود بدقة، واستخراج تقارير تحليلية شاملة،
                   واتخاذ قرارات أكثر وعيًا وفاعلية.
                 </p>
@@ -253,7 +253,7 @@ export default function Index() {
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
                   بخبرتنا التقنية وفريقنا المتخصص، نضع بين يديك منصة موثوقة تمنحك
-                  رؤية كاملة وتحكمًا أذكى في استهلاك الوقود، لنكون ��ريكك في النجاح
+                  رؤية كامل�� وتحكمًا أذكى في استهلاك الوقود، لنكون شريكك في النجاح
                   والنمو.
                 </p>
               </div>
@@ -305,7 +305,7 @@ export default function Index() {
       <section className="py-12 px-4 md:px-20">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-5">
           <div className="p-7 rounded-[28px] bg-[#878787]/5 flex flex-col gap-4">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between ml-auto">
               <span className="text-2xl">💎</span>
               <h3 className="text-text-primary text-xl font-bold leading-6">
                 قيمنا
@@ -313,7 +313,7 @@ export default function Index() {
             </div>
             <p className="text-text-primary text-lg leading-[31px] text-right">
               <span className="font-medium">الكفاءة</span>: تعزيز الاستخدام الأمثل
-              للموارد وتحسين أداء ا��أساطيل.
+              للموارد وتحسين أداء الأساطيل.
               <br />
               <span className="font-medium">الشفافية</span>: تقديم بيانات دقيقة
               وتقارير واضحة لدعم اتخاذ القرار.
@@ -334,7 +334,7 @@ export default function Index() {
 
           <div className="flex flex-col gap-5">
             <div className="p-7 rounded-[28px] bg-[#878787]/5 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between ml-auto">
                 <span className="text-2xl">👁️</span>
                 <h3 className="text-text-primary text-xl font-bold leading-6">
                   رؤيتنا
@@ -347,7 +347,7 @@ export default function Index() {
             </div>
 
             <div className="p-7 rounded-[28px] bg-[#878787]/5 flex flex-col gap-4">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between ml-auto">
                 <span className="text-2xl">📋</span>
                 <h3 className="text-text-primary text-xl font-bold leading-6">
                   رسالتنا
@@ -381,7 +381,7 @@ export default function Index() {
               {[
                 { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
                 { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
-                { id: "battery", label: "ال��طاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
+                { id: "battery", label: "البطاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
                 { id: "oil", label: "زيت المحرك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/d402ee0bf2af625acfc280bd518f04606e6cfe02?width=64" },
                 { id: "wash", label: "غسيل السيارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/c8921cf59e30692d035957d47a3a9b7062ddb0d8?width=64" },
                 { id: "fuel", label: "توصيل الوقود", icon: "https://api.builder.io/api/v1/image/assets/TEMP/7f9995a3c1ebb648345eeed678a751df28910608?width=64" },
