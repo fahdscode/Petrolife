@@ -60,7 +60,7 @@ export default function Footer() {
                   to="/"
                   className="text-text-primary text-sm leading-[22.4px] hover:text-primary-blue transition-colors"
                 >
-                  وفر مع بترولاي��
+                  وفر مع بترولايف
                 </Link>
               </div>
             </div>
