@@ -57,9 +57,9 @@ export default {
           screen: "#FFF",
         },
         text: {
-          primary: "#223548",
-          secondary: "#5B738B",
-          placeholder: "#A9B4BE",
+          primary: "hsl(var(--text-primary))",
+          secondary: "hsl(var(--text-secondary))",
+          placeholder: "hsl(var(--text-placeholder))",
           green: "#00C950",
           blue: "#5A66C1",
           negative: "#FFF",
