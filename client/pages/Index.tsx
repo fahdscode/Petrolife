@@ -25,7 +25,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
+                النظام التقني الشامل والمتكامل ف�� إدارة إستهلاك الوقود
               </span>
             </div>
 
@@ -304,7 +304,7 @@ export default function Index() {
       {/* Values Section */}
       <section className="py-12 px-4 md:px-20">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-5">
-          <div className="p-7 rounded-[28px] bg-[#878787]/5 flex flex-col gap-4">
+          <div className="p-7 rounded-[28px] bg-foreground/5 flex flex-col gap-4">
             <div className="flex items-center justify-between ml-auto">
               <span className="text-2xl">💎</span>
               <h3 className="text-text-primary text-xl font-bold leading-6">
@@ -319,7 +319,7 @@ export default function Index() {
               وتقارير واضحة لدعم اتخاذ القرار.
               <br />
               <span className="font-medium">الابتكار</span>: تطوير حلول تقنية متقدمة
-              تل����ي احتياجات العملاء المتغيرة.
+              تل��ي احتياجات العملاء المتغيرة.
               <br />
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
               التلاعب.
@@ -333,7 +333,7 @@ export default function Index() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="p-7 rounded-[28px] bg-[#878787]/5 flex flex-col gap-4">
+            <div className="p-7 rounded-[28px] bg-foreground/5 flex flex-col gap-4">
               <div className="flex items-center justify-between ml-auto">
                 <span className="text-2xl">👁️</span>
                 <h3 className="text-text-primary text-xl font-bold leading-6">
@@ -346,7 +346,7 @@ export default function Index() {
               </p>
             </div>
 
-            <div className="p-7 rounded-[28px] bg-[#878787]/5 flex flex-col gap-4">
+            <div className="p-7 rounded-[28px] bg-foreground/5 flex flex-col gap-4">
               <div className="flex items-center justify-between ml-auto">
                 <span className="text-2xl">📋</span>
                 <h3 className="text-text-primary text-xl font-bold leading-6">
