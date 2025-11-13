@@ -241,7 +241,7 @@ export default function Index() {
                   بترولايف منصة متخصصة في إدارة وتتبع استهلاك الوقود، صُممت لتلبية
                   احتياجات الشركات والمؤسسات التي تسعى إلى رفع كفاءتها التشغيلية
                   وتقليل نفقاتها. نعمل على تقديم حلول تقنية مبتكرة تساعد عملائنا
-                  على مراقبة استهلاك الوقود بد��ة، واستخراج تقارير تحليلية شاملة،
+                  على مراقبة استهلاك الوقود بدقة، واستخراج تقارير تحليلية شاملة،
                   واتخاذ قرارات أكثر وعيًا وفاعلية.
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
@@ -319,7 +319,7 @@ export default function Index() {
               وتقارير واضحة لدعم اتخاذ القرار.
               <br />
               <span className="font-medium">الابتكار</span>: تطوير حلول تقنية متقدمة
-              تل��ي احتياجات العملاء المتغيرة.
+              تل����ي احتياجات العملاء المتغيرة.
               <br />
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
               التلاعب.
@@ -517,7 +517,7 @@ export default function Index() {
                 />
                 <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
                   <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
-                    قيادة آمنة على ��ل الطرق!
+                    قيادة آمنة على كل الطرق!
                   </h3>
                   <div className="text-white text-lg font-medium leading-[35px]">
                     إطارات من أشهر الماركات العالمية
@@ -658,7 +658,7 @@ export default function Index() {
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
                 { text: "واجهة سهلة و متجاوبة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/1f5d56a2a691101aae2481f9322df779fe8895b3?width=48" },
-                { text: "طلب ال��دمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
+                { text: "طلب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
                 { text: "تتبع الطلب لحظة بلحظة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4d70ee1fd880c733997472e7c1c1e3f574662593?width=48" },
                 { text: "نظام دفع آمن ومرن", icon: "https://api.builder.io/api/v1/image/assets/TEMP/5c93a2890b7beb7220236eb2ca1430403356534e?width=48" },
                 { text: "عروض وخصومات حصرية", icon: "https://api.builder.io/api/v1/image/assets/TEMP/436398af1f391fccd11d3b37d564a743a96a45eb?width=48" },
@@ -996,7 +996,7 @@ export default function Index() {
                 <label className="text-text-primary text-sm leading-[22.4px] text-right">
                   مرفقات (اختياري)
                 </label>
-                <button className="w-full h-12 px-6 rounded-xl border border-dashed border-[#343434]/30 flex items-center justify-center gap-1 hover:border-primary-blue transition-colors">
+                <button className="w-full h-12 px-6 rounded-xl border border-dashed border-foreground/30 flex items-center justify-center gap-1 hover:border-primary-blue transition-colors">
                   <span className="text-text-secondary text-sm leading-[22.4px]">
                     ارفق الملفات هنا
                   </span>
