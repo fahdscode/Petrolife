@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1348px] px-4">
-      <div className="flex items-center justify-between gap-7 rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm px-3.5 py-2.5">
+      <div className="flex items-center justify-between gap-[26px] rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm px-3.5 py-2.5">
         {/* Right side - Logo */}
         <div className="flex items-center gap-1">
           <div className="text-white text-xl font-bold">بترولايف</div>
         </div>
 
         {/* Center - Navigation */}
-        <nav className="hidden lg:flex items-start gap-7">
+        <nav className="hidden lg:flex items-start gap-[2px]">
           <Link
             to="/"
             className="px-2.5 py-2.5 text-[#4DB1FF] text-center text-base font-bold leading-6"
@@ -18,7 +18,7 @@ export default function Header() {
             الرئيسية
           </Link>
           <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6 flex items-center gap-0">
-            <span>عنا</span>
+            <span>ع��ا</span>
           </button>
           <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6 flex items-center gap-0">
             <span>خدماتنا</span>
@@ -81,7 +81,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3">
             {/* Language & Dark Mode */}
             <button className="w-12 h-12 rounded-full border border-[#A9B4BE]/30 flex items-center justify-center">
-              <span className="text-white text-[19.2px] font-normal leading-[28.8px]">
+              <span className="text-white text-[19.2px] font-normal leading-[28.8px] -mb-2">
                 En
               </span>
             </button>
