@@ -11,7 +11,7 @@ export default function Header() {
       <div className="flex items-center justify-between gap-[26px] rounded-full border border-white/10 bg-white/[0.04] backdrop-blur-sm px-3.5 py-2.5">
         {/* Right side - Logo */}
         <div className="flex items-center gap-1">
-          <div className="text-white text-xl font-bold">بترولايف</div>
+          <div className={`text-xl font-bold transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>بترولايف</div>
         </div>
 
         {/* Center - Navigation */}
