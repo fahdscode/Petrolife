@@ -18,7 +18,7 @@ export default function Header() {
             الرئيسية
           </Link>
           <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6 flex items-center gap-0">
-            <span>ع��ا</span>
+            <span>عنا</span>
           </button>
           <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6 flex items-center gap-0">
             <span>خدماتنا</span>
