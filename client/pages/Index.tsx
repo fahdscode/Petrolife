@@ -252,7 +252,7 @@ export default function Index() {
                   الكبرى.
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
-                  بخبرتنا التقنية وفريقنا المتخصص، نضع بين يديك منصة موثوقة تمنحك
+                  بخبرتنا التقنية وفريقنا المتخصص، نضع بين يدي�� منصة موثوقة تمنحك
                   رؤية كاملة وتحكمًا أذكى في استهلاك الوقود، لنكون شريكك في النجاح
                   والنمو.
                 </p>
@@ -379,23 +379,22 @@ export default function Index() {
 
             <div className="flex flex-wrap items-center gap-3.5 justify-center">
               {[
-                { id: "fuel", label: "توصيل الوقود", icon: "⛽" },
-                { id: "wash", label: "غسيل السيارات", icon: "🚿" },
-                { id: "oil", label: "زيت المحرك", icon: "🛢️" },
-                { id: "battery", label: "البطاريات", icon: "🔋" },
-                { id: "tires", label: "الإطارات", icon: "🛞" },
-                { id: "emergency", label: "خدمات الطوارئ", icon: "🚨" },
+                { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
+                { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
+                { id: "battery", label: "البطاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
+                { id: "oil", label: "زيت المحرك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/d402ee0bf2af625acfc280bd518f04606e6cfe02?width=64" },
+                { id: "wash", label: "غسيل السيارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/c8921cf59e30692d035957d47a3a9b7062ddb0d8?width=64" },
+                { id: "fuel", label: "توصيل الوقود", icon: "https://api.builder.io/api/v1/image/assets/TEMP/7f9995a3c1ebb648345eeed678a751df28910608?width=64" },
               ].map((service) => (
                 <button
                   key={service.id}
                   onClick={() => setActiveService(service.id)}
-                  className={`flex h-[52px] px-4 justify-center items-center gap-2.5 rounded-lg ${
+                  className={`flex h-[52px] px-3 justify-center items-center gap-2.5 rounded-lg transition-all ${
                     activeService === service.id
                       ? "bg-primary-blue"
                       : "bg-primary-blue/8"
                   }`}
                 >
-                  <span className="text-2xl">{service.icon}</span>
                   <span
                     className={`text-lg font-extrabold leading-6 ${
                       activeService === service.id
@@ -405,32 +404,157 @@ export default function Index() {
                   >
                     {service.label}
                   </span>
+                  <img src={service.icon} alt="" className="w-8 h-8" />
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Service Showcase */}
+          {/* Service Showcase - Dynamic based on activeService */}
           <div className="w-full h-[335px] rounded-[32px] bg-surface-dark overflow-hidden relative">
-            <img
-              src="https://api.builder.io/api/v1/image/assets/TEMP/da8814d40ae34eef2024ea49c3ec814933922083?width=2560"
-              alt="Service Preview"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
-              <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
-                وقودك يصلك أينما كنت!
-              </h3>
-              <div className="text-white text-lg font-medium leading-[35px]">
-                توصيل جميع أنواع الوقود (95، 91، ديزل)
-                <br />
-                خدمة 24/7 في جميع المناطق
-                <br />
-                أسعار منافسة ومضمونة
-                <br />
-                دفع آمن ومتنوع
-              </div>
-            </div>
+            {activeService === "fuel" && (
+              <>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/da8814d40ae34eef2024ea49c3ec814933922083?width=2560"
+                  alt="Fuel Delivery"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                    وقودك يصلك أينما كنت!
+                  </h3>
+                  <div className="text-white text-lg font-medium leading-[35px]">
+                    توصيل جميع أنواع الوقود (95، 91، ديزل)
+                    <br />
+                    خدمة 24/7 في جميع المناطق
+                    <br />
+                    أسعار منافسة ومضمونة
+                    <br />
+                    دفع آمن ومتنوع
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activeService === "wash" && (
+              <>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/9bec9af81d2cc32633bde535935b7eee8d56e2bf?width=2560"
+                  alt="Car Wash"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                    نظافة احترافية لسيارتك!
+                  </h3>
+                  <div className="text-white text-lg font-medium leading-[35px]">
+                    غسيل داخلي وخارجي شامل
+                    <br />
+                    استخدام مواد صديقة للبيئة
+                    <br />
+                    تنظيف المقاعد والسجاد
+                    <br />
+                    تلميع وحماية الطلاء
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activeService === "oil" && (
+              <>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/50ff286df333dc8b8a9b32204eae7b2694b7ae5d?width=2560"
+                  alt="Engine Oil"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-16 right-20 max-w-[354px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                    عناية فائقة بمحرك سيارتك!
+                  </h3>
+                  <div className="text-white text-lg font-medium leading-[35px]">
+                    زيوت عالية الجودة من أفضل الماركات
+                    <br />
+                    تغيير الفلاتر والفحص الشامل
+                    <br />
+                    استشارة مجانية لنوع الزيت المناسب
+                    <br />
+                    ضمان على الخدمة والمنتج
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activeService === "battery" && (
+              <>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/eb982c4df0a2bb12230fa997aea22da18727fb72?width=2560"
+                  alt="Battery Service"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                    طاقة لا تنضب لسيارتك!
+                  </h3>
+                  <div className="text-white text-lg font-medium leading-[35px]">
+                    بطاريات أصلية بضمان شامل
+                    <br />
+                    فحص وتشخيص مجاني
+                    <br />
+                    خدمة الإنقاذ السريع
+                    <br />
+                    استبدال فوري وآمن
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activeService === "tires" && (
+              <>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/1095809809cba5bd51d08e4bf50c7993aca651fe?width=2560"
+                  alt="Tires Service"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                    قيادة آمنة على كل الطرق!
+                  </h3>
+                  <div className="text-white text-lg font-medium leading-[35px]">
+                    إطارات من أشهر الماركات العالمية
+                    <br />
+                    فحص ضغط الهواء مجاناً
+                    <br />
+                    خدمات الطوارئ والإصلاح
+                    <br />
+                    استشارة لاختيار الإطار المناسب
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activeService === "emergency" && (
+              <>
+                <img
+                  src="https://api.builder.io/api/v1/image/assets/TEMP/b27cd1ccc67c4a616b3fb6723058347c660ea7ee?width=2560"
+                  alt="Emergency Services"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute top-16 right-20 max-w-[382px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                    نجدتك السريعة في أي وقت!
+                  </h3>
+                  <div className="text-white text-lg font-medium leading-[35px]">
+                    استجابة خلال 15-30 دقيقة
+                    <br />
+                    فريق مدرب ومجهز
+                    <br />
+                    حلول فورية للأعطال البسيطة
+                    <br />
+                    خدمة القطر عند الحاجة
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </section>
@@ -767,7 +891,7 @@ export default function Index() {
                 انضم إلى شبكة بترولايف واربح معنا
               </h2>
               <p className="text-white text-xl font-medium leading-7">
-                كن شريكاً في منصة الخدمات الأسرع نمواً في المنطقة
+                كن شريكاً في منصة الخدمات الأس��ع نمواً في المنطقة
               </p>
             </div>
 
