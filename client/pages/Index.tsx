@@ -24,7 +24,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل والمتكامل في إ��ارة إستهلاك الوقود
+                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
               </span>
             </div>
 
@@ -228,7 +228,7 @@ export default function Index() {
             <div className="flex flex-col items-end gap-7">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px] ml-auto">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
-                  من ��حن؟
+                  من نحن؟
                 </span>
               </div>
 
