@@ -13,13 +13,13 @@ export default function Index() {
 
       {/* Hero Section */}
       <section className="relative min-h-[670px] bg-surface-dark flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-93 bg-surface-dark"></div>
+        <div className="absolute inset-0 opacity-93 bg-surface-dark bg-no-repeat bg-center bg-cover"></div>
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/8362221a1e91eb061bfc63f8bb4c37c483e0a111?width=2884"
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 opacity-93 bg-surface-dark"></div>
+        <div className="absolute inset-0 opacity-93 bg-surface-dark bg-no-repeat bg-center bg-cover"></div>
 
         <div className="relative z-10 flex flex-col items-center gap-10 px-4 max-w-[714px] text-center mt-20">
           <div className="flex flex-col items-center gap-7">
@@ -154,7 +154,7 @@ export default function Index() {
               </span>
             </div>
             <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
-              أرقام تتحدث عن ثقتكم بنا
+              أرقام تتحدث عن ث��تكم بنا
             </h2>
           </div>
 
@@ -240,7 +240,7 @@ export default function Index() {
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
                   بترولايف منصة متخصصة في إدارة وتتبع استهلاك الوقود، صُممت لتلبية
                   احتياجات الشركات والمؤسسات التي تسعى إلى رفع كفاءتها التشغيلية
-                  وتقليل نفقاتها. نعمل على تقديم حلول تقنية مبتكرة تساعد عملائنا
+                  وتقليل نفقاتها. نعمل ع��ى تقديم حلول تقنية مبتكرة تساعد عملائنا
                   على مراقبة استهلاك الوقود بدقة، واستخراج تقارير تحليلية شاملة،
                   واتخاذ قرارات أكثر وعيًا وفاعلية.
                 </p>
@@ -253,7 +253,7 @@ export default function Index() {
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
                   بخبرتنا التقنية وفريقنا المتخصص، نضع بين يديك منصة موثوقة تمنحك
-                  رؤية كاملة وتحكمًا أذكى في استهلاك الوقود، لنكون شريكك في النجاح
+                  رؤية كاملة وتحكمًا أذكى في استهلاك الوقود، لنكون ��ريكك في النجاح
                   والنمو.
                 </p>
               </div>
@@ -313,7 +313,7 @@ export default function Index() {
             </div>
             <p className="text-text-primary text-lg leading-[31px] text-right">
               <span className="font-medium">الكفاءة</span>: تعزيز الاستخدام الأمثل
-              للموارد وتحسين أداء الأساطيل.
+              للموارد وتحسين أداء ا��أساطيل.
               <br />
               <span className="font-medium">الشفافية</span>: تقديم بيانات دقيقة
               وتقارير واضحة لدعم اتخاذ القرار.
@@ -381,7 +381,7 @@ export default function Index() {
               {[
                 { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
                 { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
-                { id: "battery", label: "البطاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
+                { id: "battery", label: "ال��طاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
                 { id: "oil", label: "زيت المحرك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/d402ee0bf2af625acfc280bd518f04606e6cfe02?width=64" },
                 { id: "wash", label: "غسيل السيارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/c8921cf59e30692d035957d47a3a9b7062ddb0d8?width=64" },
                 { id: "fuel", label: "توصيل الوقود", icon: "https://api.builder.io/api/v1/image/assets/TEMP/7f9995a3c1ebb648345eeed678a751df28910608?width=64" },
@@ -395,6 +395,7 @@ export default function Index() {
                       : "bg-primary-blue/8"
                   }`}
                 >
+                  <img src={service.icon} alt="" className="w-8 h-8" />
                   <span
                     className={`text-lg font-extrabold leading-6 ${
                       activeService === service.id
@@ -404,7 +405,6 @@ export default function Index() {
                   >
                     {service.label}
                   </span>
-                  <img src={service.icon} alt="" className="w-8 h-8" />
                 </button>
               ))}
             </div>
@@ -667,10 +667,10 @@ export default function Index() {
                   key={index}
                   className="flex items-center gap-1 justify-center"
                 >
+                  <img src={feature.icon} alt="" className="w-6 h-6" />
                   <span className="text-white text-lg font-medium leading-[35px]">
                     {feature.text}
                   </span>
-                  <img src={feature.icon} alt="" className="w-6 h-6" />
                 </div>
               ))}
             </div>
@@ -689,10 +689,10 @@ export default function Index() {
                     key={index}
                     className="flex items-center gap-1 justify-center"
                   >
-                    <span className="text-white text-lg font-medium leading-[35px]">
-                      {feature.text}
-                    </span>
                     <img src={feature.icon} alt="" className="w-6 h-6" />
+                  <span className="text-white text-lg font-medium leading-[35px]">
+                    {feature.text}
+                  </span>
                   </div>
                 ))}
               </div>
@@ -706,10 +706,10 @@ export default function Index() {
                     key={index}
                     className="flex items-center gap-1 justify-center"
                   >
-                    <span className="text-white text-lg font-medium leading-[35px]">
-                      {feature.text}
-                    </span>
                     <img src={feature.icon} alt="" className="w-6 h-6" />
+                  <span className="text-white text-lg font-medium leading-[35px]">
+                    {feature.text}
+                  </span>
                   </div>
                 ))}
               </div>
@@ -730,10 +730,10 @@ export default function Index() {
                   key={index}
                   className="flex items-center gap-1 justify-center"
                 >
+                  <img src={feature.icon} alt="" className="w-6 h-6" />
                   <span className="text-white text-lg font-medium leading-[35px]">
                     {feature.text}
                   </span>
-                  <img src={feature.icon} alt="" className="w-6 h-6" />
                 </div>
               ))}
             </div>
@@ -874,15 +874,15 @@ export default function Index() {
 
       {/* CTA Section */}
       <section className="py-12 px-4 md:px-20">
-        <div className="max-w-[1280px] mx-auto h-[359px] rounded-[28px] bg-[#7F321A] overflow-hidden relative">
+        <div className="max-w-[1280px] mx-auto h-[359px] rounded-[28px] bg-[#7F321A] overflow-hidden relative flex flex-col">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/19ef58bde84dfa86c78abeecfcea55382c24cb9a?width=2560"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute top-14 right-20 md:right-[455px] max-w-[755px] flex flex-col items-end gap-11 text-right">
+          <div className="absolute top-14 right-20 md:right-[455px] max-w-[755px] flex flex-col items-end gap-11 text-right ml-auto md:mr-[-350px]">
             <div className="flex flex-col items-end gap-2">
-              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-white/20 backdrop-blur-[10px]">
+              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-white/20 backdrop-blur-[10px] ml-auto">
                 <span className="text-white text-base font-bold leading-6 opacity-60">
                   انضم إلينا الآن
                 </span>
@@ -895,7 +895,7 @@ export default function Index() {
               </p>
             </div>
 
-            <button className="flex h-14 px-4 pr-1.5 items-center gap-3 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.4)]">
+            <button className="flex h-14 px-4 pr-1.5 items-center gap-3 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.4)] ml-auto">
               <div className="w-11 h-11 rounded-full bg-[#7F321A]/5 flex items-center justify-center">
                 <svg
                   className="w-4 h-4"

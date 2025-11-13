@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="flex flex-col items-end gap-4 max-w-[296px]">
             <div className="flex items-center gap-1">
-              <div className="text-xl font-bold text-right ml-auto">بترولايف</div>
+              <div className="text-xl font-bold text-right w-auto flex-grow">بترولايف</div>
             </div>
             <p className="text-text-primary text-sm leading-[22.4px] text-right opacity-75">
               بترولايف منصة متخصصة في إدارة وتتبع استهلاك الوقود، صُممت لتلبية
@@ -60,14 +60,14 @@ export default function Footer() {
                   to="/"
                   className="text-text-primary text-sm leading-[22.4px] hover:text-primary-blue transition-colors"
                 >
-                  وفر مع بترولايف
+                  وفر مع بترولاي��
                 </Link>
               </div>
             </div>
 
             {/* Services */}
             <div className="flex flex-col items-end gap-4">
-              <h3 className="text-text-primary text-lg font-extrabold opacity-80">
+              <h3 className="text-text-primary text-lg font-extrabold opacity-80 ml-auto">
                 الخدمات:
               </h3>
               <div className="flex flex-col items-start gap-1.5 opacity-80">
@@ -94,17 +94,17 @@ export default function Footer() {
 
             {/* Apps */}
             <div className="flex flex-col items-end gap-4">
-              <h3 className="text-text-primary text-lg font-extrabold opacity-80">
+              <h3 className="text-text-primary text-lg font-extrabold opacity-80 ml-auto">
                 حمل تطبيقاتنا:
               </h3>
-              <div className="flex flex-col items-end gap-1.5 opacity-80">
-                <span className="text-text-primary text-sm leading-[22.4px]">
+              <div className="flex flex-col items-end gap-1.5 opacity-80 ml-auto">
+                <span className="text-text-primary text-sm leading-[22.4px] ml-auto">
                   تطبيق الأفراد
                 </span>
-                <span className="text-text-primary text-sm leading-[22.4px]">
+                <span className="text-text-primary text-sm leading-[22.4px] ml-auto">
                   تطبيق قائدي المركبات
                 </span>
-                <span className="text-text-primary text-sm leading-[22.4px]">
+                <span className="text-text-primary text-sm leading-[22.4px] ml-auto">
                   تطبيق مزودي الخدمات
                 </span>
               </div>
