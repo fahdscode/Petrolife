@@ -369,7 +369,7 @@ export default function Index() {
             <div className="flex flex-col items-center gap-4">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
-                  خدماتنــــــــــا
+                  خ��ماتنــــــــــا
                 </span>
               </div>
               <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
@@ -821,7 +821,7 @@ export default function Index() {
                 onClick={() => setActiveFaq(activeFaq === index ? -1 : index)}
               >
                 <div className="flex items-center justify-between">
-                  <button className="w-8 h-8 rounded-2xl border border-white/10 flex items-center justify-center">
+                  <button className="w-8 h-8 rounded-2xl border border-foreground/10 flex items-center justify-center">
                     <span className="text-text-primary">
                       {activeFaq === index ? "−" : "+"}
                     </span>
