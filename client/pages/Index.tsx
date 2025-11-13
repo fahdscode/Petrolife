@@ -25,7 +25,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
+                النظام التقني الشامل وا��متكامل في إدارة إستهلاك الوقود
               </span>
             </div>
 
@@ -145,7 +145,7 @@ export default function Index() {
       </section>
 
       {/* Statistics Section */}
-      <section className="py-12 px-4 bg-white relative overflow-hidden">
+      <section className="py-12 px-4 bg-background relative overflow-hidden">
         <div className="max-w-[1064px] mx-auto flex flex-col items-center gap-7">
           <div className="flex flex-col items-center gap-4 max-w-[714px]">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
@@ -223,7 +223,7 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 px-4 md:px-20 bg-white">
+      <section className="py-12 px-4 md:px-20 bg-background">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col items-end gap-10 text-right order-2 md:order-1">
             <div className="flex flex-col items-end gap-7">
@@ -363,13 +363,13 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 md:px-20 bg-white">
+      <section className="py-16 px-4 md:px-20 bg-background">
         <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-12">
           <div className="flex flex-col items-center gap-8 max-w-[1096px]">
             <div className="flex flex-col items-center gap-4">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
-                  خدماتنــــــــــا
+                  خ��ماتنــــــــــا
                 </span>
               </div>
               <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
@@ -720,7 +720,7 @@ export default function Index() {
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
                 { text: "نمو مستدام لأعمالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
-                { text: "دعم تقني شامل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
+                { text: "دعم تقني ش��مل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
                 { text: "تدريب وتأهيل مستمر", icon: "https://api.builder.io/api/v1/image/assets/TEMP/ef59665d154a72f339a582e4618f56dc77da79b9?width=48" },
                 { text: "مدفوعات سريعة وآمنة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/410f0abd96be385b1da9c655977bd001697ae4a0?width=48" },
                 { text: "نظام إدارة الطلبات الذكي", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f468e3ca40695b28b82d809dc53e3ba90d1d7471?width=48" },
@@ -791,7 +791,7 @@ export default function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 md:px-[230px] bg-white">
+      <section className="py-16 px-4 md:px-[230px] bg-background">
         <div className="max-w-[980px] mx-auto flex flex-col items-center gap-14">
           <div className="flex flex-col items-center gap-7 max-w-[755px]">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
@@ -928,7 +928,7 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-[136px] px-4 md:px-40 bg-white">
+      <section className="py-[136px] px-4 md:px-40 bg-background">
         <div className="max-w-full flex flex-col gap-15">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-15">
             <div className="flex flex-col items-end gap-7">
