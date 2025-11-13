@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 export default function Index() {
   const [activeService, setActiveService] = useState("fuel");
   const [activeFaq, setActiveFaq] = useState(0);
+  const [activeAppTab, setActiveAppTab] = useState<"individuals" | "companies" | "providers">("individuals");
 
   return (
     <div className="min-h-screen bg-background">
@@ -244,7 +245,7 @@ export default function Index() {
                   واتخاذ قرارات أكثر وعيًا وفاعلية.
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
-                  نؤمن أن إدارة الوقود ليست مجرد متابعة أرقام، بل هي أداة
+                  نؤمن أن إد��رة الوقود ليست مجرد متابعة أرقام، بل هي أداة
                   استراتيجية لإدارة الموارد بكفاءة، تقليل الهدر، وتعزيز الاستدامة.
                   ولذلك، نوفر نظامًا متطورًا يجمع بين السهولة، الدقة، والشفافية،
                   ليناسب مختلف أحجام الأعمال من الشركات الصغيرة إلى أساطيل النقل
