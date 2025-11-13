@@ -85,45 +85,45 @@ export default function Header() {
         <div className="flex items-center gap-3.5">
           <div className="hidden lg:flex items-center gap-3">
             {/* Language & Dark Mode */}
-            <button className="w-12 h-12 rounded-full border border-[#A9B4BE]/30 flex items-center justify-center">
-              <span className="text-white text-[19.2px] font-normal leading-[28.8px] -mb-2">
+            <button className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors ${isLightBackground ? 'border-[#34353472] text-text-primary' : 'border-[#A9B4BE]/30 text-white'}`}>
+              <span className="text-[19.2px] font-normal leading-[28.8px] -mb-2">
                 En
               </span>
             </button>
-            <button 
+            <button
               onClick={toggleDarkMode}
-              className="w-12 h-12 rounded-full border border-[#A9B4BE]/30 flex items-center justify-center hover:bg-white/5 transition-colors"
+              className={`w-12 h-12 rounded-full border flex items-center justify-center transition-colors ${isLightBackground ? 'border-[#34353472] hover:bg-text-primary/5' : 'border-[#A9B4BE]/30 hover:bg-white/5'}`}
               aria-label={isDarkMode ? "تفعيل الوضع النهاري" : "تفعيل الوضع الليلي"}
             >
               {isDarkMode ? (
                 <svg
-                  className="w-6 h-6"
+                  className={`w-6 h-6 ${isLightBackground ? 'text-text-primary' : 'text-white'}`}
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M17 12.0001C17 14.7615 14.7614 17.0001 12 17.0001C9.23858 17.0001 7 14.7615 7 12.0001C7 9.23864 9.23858 7.00006 12 7.00006C14.7614 7.00006 17 9.23864 17 12.0001Z"
-                    stroke="white"
+                    stroke="currentColor"
                     strokeWidth="1.5"
                   />
                   <path
                     d="M12 1.99995V3.49995M12 20.5V22M19.0708 19.0713L18.0101 18.0106M5.98926 5.98921L4.9286 4.92855M22 12H20.5M3.5 12H2M19.0713 4.92866L18.0106 5.98932M5.98975 18.0107L4.92909 19.0714"
-                    stroke="white"
+                    stroke="currentColor"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                   />
                 </svg>
               ) : (
                 <svg
-                  className="w-6 h-6"
+                  className={`w-6 h-6 ${isLightBackground ? 'text-text-primary' : 'text-white'}`}
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M21.5 14.0784C20.3003 14.7189 18.9301 15.0821 17.4751 15.0821C12.7491 15.0821 8.91792 11.2509 8.91792 6.52485C8.91792 5.06986 9.28105 3.69968 9.92163 2.5C5.66765 3.49698 2.5 7.31513 2.5 11.8731C2.5 17.1899 6.8101 21.5 12.1269 21.5C16.6849 21.5 20.503 18.3324 21.5 14.0784Z"
-                    stroke="white"
+                    stroke="currentColor"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -135,8 +135,8 @@ export default function Header() {
 
           {/* Auth Buttons */}
           <div className="flex items-center gap-3">
-            <button className="flex h-12 px-4 justify-center items-center gap-1 rounded-full border border-white/50">
-              <span className="text-white text-base font-bold leading-6">
+            <button className={`flex h-12 px-4 justify-center items-center gap-1 rounded-full border transition-colors ${isLightBackground ? 'border-text-primary/30 text-text-primary' : 'border-white/50 text-white'}`}>
+              <span className="text-base font-bold leading-6">
                 تسجيل الدخول
               </span>
             </button>
@@ -156,7 +156,7 @@ export default function Header() {
                 />
               </svg>
               <span className="text-white text-base font-bold leading-6">
-                حمل التطبيق الآن
+                حمل التطبيق الآ��
               </span>
             </button>
           </div>
