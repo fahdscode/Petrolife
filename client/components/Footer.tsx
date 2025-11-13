@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Logo & Description */}
           <div className="flex flex-col items-end gap-4 max-w-[296px]">
             <div className="flex items-center gap-1">
-              <div className="text-xl font-bold">بترولايف</div>
+              <div className="text-xl font-bold text-right ml-auto">بترولايف</div>
             </div>
             <p className="text-text-primary text-sm leading-[22.4px] text-right opacity-75">
               بترولايف منصة متخصصة في إدارة وتتبع استهلاك الوقود، صُممت لتلبية
