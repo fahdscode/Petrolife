@@ -18,14 +18,14 @@ export default function Header() {
         <nav className="hidden lg:flex items-start gap-[2px]">
           <Link
             to="/"
-            className="px-2.5 py-2.5 text-[#4DB1FF] text-center text-base font-bold leading-6"
+            className={`px-2.5 py-2.5 text-center text-base font-bold leading-6 transition-colors ${isLightBackground ? 'text-primary-blue' : 'text-[#4DB1FF]'}`}
           >
             الرئيسية
           </Link>
-          <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6 flex items-center gap-0">
+          <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-0 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
             <span>عنا</span>
           </button>
-          <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6 flex items-center gap-0">
+          <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-0 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
             <span>خدماتنا</span>
             <svg
               className="w-4 h-4"
@@ -35,20 +35,20 @@ export default function Header() {
             >
               <path
                 d="M10 4C10 4 6.00001 6.94593 6 8C5.99999 9.05413 10 12 10 12"
-                stroke="white"
+                stroke="currentColor"
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
             </svg>
           </button>
-          <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6">
+          <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
             تطبيقاتنا
           </button>
-          <button className="px-2.5 py-2.5 text-white text-center text-base font-normal leading-6">
+          <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
             بترولايف للشركات
           </button>
-          <button className="px-2.5 py-2.5 text-[#FF5C77] text-center text-base font-normal leading-6 flex items-center gap-1 pb-1">
+          <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-1 pb-1 transition-colors ${isLightBackground ? 'text-[#E73A6C]' : 'text-[#FF5C77]'}`}>
             <span>الإنقاذ السريع</span>
             <svg
               className="w-[18px] h-[18px]"
@@ -58,21 +58,21 @@ export default function Header() {
             >
               <path
                 d="M5.25 15C6.07843 15 6.75 14.3284 6.75 13.5C6.75 12.6716 6.07843 12 5.25 12C4.42157 12 3.75 12.6716 3.75 13.5C3.75 14.3284 4.42157 15 5.25 15Z"
-                stroke="#FF5C77"
+                stroke="currentColor"
                 strokeWidth="1.125"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M12.75 15C13.5784 15 14.25 14.3284 14.25 13.5C14.25 12.6716 13.5784 12 12.75 12C11.9216 12 11.25 12.6716 11.25 13.5C11.25 14.3284 11.9216 15 12.75 15Z"
-                stroke="#FF5C77"
+                stroke="currentColor"
                 strokeWidth="1.125"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
               <path
                 d="M9 7.5H12.6453C13.6683 7.5 13.9156 7.70272 14.1162 8.70585C14.1891 9.07065 14.1279 9.3495 14.5059 9.3798C15.1372 9.4305 15.5804 9.8544 15.8182 10.409C16.1593 11.2052 16.5 11.8743 16.5 12.75C16.5 13.1035 16.5 13.2803 16.3902 13.3902C16.2803 13.5 16.1035 13.5 15.75 13.5H14.25"
-                stroke="#FF5C77"
+                stroke="currentColor"
                 strokeWidth="1.125"
                 strokeLinecap="round"
                 strokeLinejoin="round"
