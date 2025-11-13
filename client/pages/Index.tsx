@@ -318,7 +318,7 @@ export default function Index() {
               وتقارير واضحة لدعم اتخاذ القرار.
               <br />
               <span className="font-medium">الابتكار</span>: تطوير حلول تقنية متقدمة
-              تلبي احتياجات الع��لاء المتغيرة.
+              تلبي احتياجات العملاء المتغيرة.
               <br />
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
               التلاعب.
@@ -327,7 +327,7 @@ export default function Index() {
               رضا العملاء واستمرارية العمليات.
               <br />
               <span className="font-medium">الاحترافية</span>: التزام أعلى معايير
-              الجودة والدقة في كل العمليات
+              الجو��ة والدقة في كل العمليات
             </p>
           </div>
 
@@ -341,7 +341,7 @@ export default function Index() {
               </div>
               <p className="text-text-primary text-lg leading-6 text-right">
                 نهدف إلى تحويل إدارة الوقود إلى عملية ذكية وفعالة تعزز كفاءة
-                الأساطيل وتدعم القرارات ا��استراتيجية.
+                الأساطيل وتدعم القرارات الاستراتيجية.
               </p>
             </div>
 
@@ -353,7 +353,7 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-text-primary text-lg leading-6 text-right">
-                نقدّم حلولاً ذكية وفعّالة لإدارة استهلاك الوقود، لتمكين الشركات من
+                نقدّم حلولاً ذ��ية وفعّالة لإدارة استهلاك الوقود، لتمكين الشركات من
                 تقليل الهدر وتحسين الكفاءة التشغيلية.
               </p>
             </div>
@@ -423,7 +423,7 @@ export default function Index() {
               <div className="text-white text-lg font-medium leading-[35px]">
                 توصيل جميع أنواع الوقود (95، 91، ديزل)
                 <br />
-                خدمة 24/7 في جميع الم��اطق
+                خدمة 24/7 في جميع المناطق
                 <br />
                 أسعار منافسة ومضمونة
                 <br />
@@ -520,10 +520,10 @@ export default function Index() {
           <div className="flex flex-col gap-[18px] w-full">
             {[
               {
-                q: "1. ��يف يمكنني طلب خدمة من بترولايف؟",
+                q: "1. كيف يمكنني طلب خدمة من بترولايف؟",
                 a: "يمكنك طلب الخدمة بعدة طرق: تطبيق بترولايف للهواتف الذكية ، الموقع الإلكتروني ، الاتصال المباشر ، واتساب",
               },
-              { q: "2. كم يستغرق وصول الخدمة؟", a: "" },
+              { q: "2. كم يست��رق وصول الخدمة؟", a: "" },
               { q: "3. هل الأسعار منافسة مقارنة بالطرق التقليدية؟", a: "" },
               { q: "4. ما هي طرق الدفع المتاحة؟", a: "" },
               { q: "5. هل تغطي خدماتكم جميع المناطق؟", a: "" },
@@ -681,7 +681,7 @@ export default function Index() {
                   <input
                     type="text"
                     placeholder="هشام موسى"
-                    className="w-full h-12 px-4 rounded-xl border border-[#292929]/15 text-right focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    className="w-full h-12 px-4 rounded-xl border border-input bg-background text-foreground text-right focus:outline-none focus:ring-2 focus:ring-primary-blue"
                   />
                 </div>
 
@@ -692,7 +692,7 @@ export default function Index() {
                   <input
                     type="email"
                     placeholder="example@gmail.com"
-                    className="w-full h-12 px-4 rounded-xl border border-[#292929]/15 text-right focus:outline-none focus:ring-2 focus:ring-primary-blue"
+                    className="w-full h-12 px-4 rounded-xl border border-input bg-background text-foreground text-right focus:outline-none focus:ring-2 focus:ring-primary-blue"
                   />
                 </div>
               </div>
