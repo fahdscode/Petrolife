@@ -25,7 +25,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل والمتكامل ف�� إدارة إستهلاك الوقود
+                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
               </span>
             </div>
 
@@ -318,7 +318,7 @@ export default function Index() {
               <span className="font-medium">الشفافية</span>: تقديم بيانات دقيقة
               وتقارير واضحة لدعم اتخاذ القرار.
               <br />
-              <span className="font-medium">الابتكار</span>: تطوير حلول تقنية متقدمة
+              <span className="font-medium">الابتكار</span>: تطوير حلول ��قنية متقدمة
               تل��ي احتياجات العملاء المتغيرة.
               <br />
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
@@ -341,7 +341,7 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-text-primary text-lg leading-6 text-right">
-                نهدف إلى تحويل إدارة الوقود إلى عملية ذكية وفعالة تعزز كفاءة
+                نهدف إلى تحويل إدارة الوقود إلى عملية ذكية وفعالة ��عزز كفاءة
                 الأساطيل وتدعم القرارات الاستراتيجية.
               </p>
             </div>
@@ -658,7 +658,7 @@ export default function Index() {
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
                 { text: "واجهة سهلة و متجاوبة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/1f5d56a2a691101aae2481f9322df779fe8895b3?width=48" },
-                { text: "طلب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
+                { text: "ط��ب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
                 { text: "تتبع الطلب لحظة بلحظة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4d70ee1fd880c733997472e7c1c1e3f574662593?width=48" },
                 { text: "نظام دفع آمن ومرن", icon: "https://api.builder.io/api/v1/image/assets/TEMP/5c93a2890b7beb7220236eb2ca1430403356534e?width=48" },
                 { text: "عروض وخصومات حصرية", icon: "https://api.builder.io/api/v1/image/assets/TEMP/436398af1f391fccd11d3b37d564a743a96a45eb?width=48" },
@@ -719,7 +719,7 @@ export default function Index() {
           {activeAppTab === "providers" && (
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
-                { text: "نمو مستدام لأعمالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
+                { text: "نمو مستدام لأ��مالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
                 { text: "دعم تقني شامل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
                 { text: "تدريب وتأهيل مستمر", icon: "https://api.builder.io/api/v1/image/assets/TEMP/ef59665d154a72f339a582e4618f56dc77da79b9?width=48" },
                 { text: "مدفوعات سريعة وآمنة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/410f0abd96be385b1da9c655977bd001697ae4a0?width=48" },
@@ -817,7 +817,7 @@ export default function Index() {
             ].map((faq, index) => (
               <div
                 key={index}
-                className="p-6 rounded-3xl bg-[#C6C6C6]/10 cursor-pointer"
+                className="p-6 rounded-3xl bg-foreground/10 cursor-pointer"
                 onClick={() => setActiveFaq(activeFaq === index ? -1 : index)}
               >
                 <div className="flex items-center justify-between">
