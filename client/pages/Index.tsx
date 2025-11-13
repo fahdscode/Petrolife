@@ -46,7 +46,7 @@ export default function Index() {
           <div className="flex items-center gap-3 flex-wrap justify-center">
             <button className="flex h-14 px-4 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50">
               <span className="text-white text-base font-bold leading-6 px-3">
-                اطلب خدم�� عاجلة
+                اطلب خدمة عاجلة
               </span>
               <svg
                 className="w-[18px] h-[18px]"
@@ -252,7 +252,7 @@ export default function Index() {
                   الكبرى.
                 </p>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
-                  بخبرتنا التقنية وفريقنا المتخصص، نضع بين يدي�� منصة موثوقة تمنحك
+                  بخبرتنا التقنية وفريقنا المتخصص، نضع بين يديك منصة موثوقة تمنحك
                   رؤية كاملة وتحكمًا أذكى في استهلاك الوقود، لنكون شريكك في النجاح
                   والنمو.
                 </p>
@@ -328,7 +328,7 @@ export default function Index() {
               رضا العملاء واستمرارية العمليات.
               <br />
               <span className="font-medium">الاحترافية</span>: التزام أعلى معايير
-              الجو��ة والدقة في كل العمليات
+              الجودة والدقة في كل العمليات
             </p>
           </div>
 
@@ -354,7 +354,7 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-text-primary text-lg leading-6 text-right">
-                نقدّم حلولاً ذ��ية وفعّالة لإدارة استهلاك الوقود، لتمكين الشركات من
+                نقدّم حلولاً ذاتية وفعّالة لإدارة استهلاك الوقود، لتمكين الشركات من
                 تقليل الهدر وتحسين الكفاءة التشغيلية.
               </p>
             </div>
@@ -810,7 +810,7 @@ export default function Index() {
                 q: "1. كيف يمكنني طلب خدمة من بترولايف؟",
                 a: "يمكنك طلب الخدمة بعدة طرق: تطبيق بترولايف للهواتف الذكية ، الموقع الإلكتروني ، الاتصال المباشر ، واتساب",
               },
-              { q: "2. كم يست��رق وصول الخدمة؟", a: "" },
+              { q: "2. كم يستغرق وصول الخدمة؟", a: "" },
               { q: "3. هل الأسعار منافسة مقارنة بالطرق التقليدية؟", a: "" },
               { q: "4. ما هي طرق الدفع المتاحة؟", a: "" },
               { q: "5. هل تغطي خدماتكم جميع المناطق؟", a: "" },
@@ -891,7 +891,7 @@ export default function Index() {
                 انضم إلى شبكة بترولايف واربح معنا
               </h2>
               <p className="text-white text-xl font-medium leading-7">
-                كن شريكاً في منصة الخدمات الأس��ع نمواً في المنطقة
+                كن شريكاً في منصة الخدمات الأسوع نمواً في المنطقة
               </p>
             </div>
 
@@ -942,7 +942,7 @@ export default function Index() {
               </h2>
             </div>
             <p className="max-w-[491px] text-text-primary text-base leading-6 opacity-50 text-right">
-              يسعدنا دائمًا أ�� نستمع إليك! هل لديك سؤال؟ أو فكرة ترغب في طرحها؟
+              يسعدنا دائمًا أن نستمع إليك! هل لديك سؤال؟ أو فكرة ترغب في طرحها؟
               لا تتردد أبدًا في مراسلتنا عبر الإيميل أو الواتساب. نحن نؤمن بأن
               التواصل الفعّال هو أساس الشراكة الناجحة.
             </p>
