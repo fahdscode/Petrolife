@@ -25,7 +25,7 @@ export default function Index() {
           <div className="flex flex-col items-center gap-7">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
               <span className="text-white text-base font-bold leading-6">
-                النظام التقني الشامل وا��متكامل في إدارة إستهلاك الوقود
+                النظام التقني الشامل والمتكامل في إدارة إستهلاك الوق��د
               </span>
             </div>
 
@@ -369,7 +369,7 @@ export default function Index() {
             <div className="flex flex-col items-center gap-4">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px]">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
-                  خ��ماتنــــــــــا
+                  خدماتنــــــــــا
                 </span>
               </div>
               <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
@@ -720,7 +720,7 @@ export default function Index() {
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
                 { text: "نمو مستدام لأعمالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
-                { text: "دعم تقني ش��مل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
+                { text: "دعم تقني شامل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
                 { text: "تدريب وتأهيل مستمر", icon: "https://api.builder.io/api/v1/image/assets/TEMP/ef59665d154a72f339a582e4618f56dc77da79b9?width=48" },
                 { text: "مدفوعات سريعة وآمنة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/410f0abd96be385b1da9c655977bd001697ae4a0?width=48" },
                 { text: "نظام إدارة الطلبات الذكي", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f468e3ca40695b28b82d809dc53e3ba90d1d7471?width=48" },
@@ -948,7 +948,7 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="p-10 rounded-3xl bg-white/4 shadow-[10px_10px_50px_rgba(0,0,0,0.1)]">
+          <div className="p-10 rounded-3xl bg-background/50 shadow-[10px_10px_50px_rgba(0,0,0,0.1)]">
             <div className="grid md:grid-cols-2 gap-7">
               <div className="flex flex-col items-end gap-2 order-2 md:order-1">
                 <label className="text-text-primary text-sm leading-[22.4px] text-right">
