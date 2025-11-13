@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useDarkMode } from "@/hooks/use-dark-mode";
+import { useScrollBackground } from "@/hooks/use-scroll-background";
 
 export default function Header() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { isLightBackground } = useScrollBackground();
 
   return (
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1348px] px-4">
