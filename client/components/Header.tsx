@@ -211,24 +211,24 @@ export default function Header() {
               <nav className="flex flex-col gap-2 px-6">
                 <Link
                   to="/"
-                  className={`px-6 py-4 text-right text-xl font-bold leading-6 transition-colors hover:bg-foreground/5 rounded-lg ${isLightBackground ? 'text-primary-blue' : 'text-[#4DB1FF]'}`}
+                  className={`px-6 py-4 text-right text-xl font-bold leading-6 transition-colors hover:bg-foreground/5 ${isLightBackground ? 'text-primary-blue' : 'text-[#4DB1FF]'}`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   الرئيسية
                 </Link>
-                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 rounded-lg ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
                   عنا
                 </button>
-                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 rounded-lg ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
                   خدماتنا
                 </button>
-                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 rounded-lg ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
                   تطبيقاتنا
                 </button>
-                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 rounded-lg ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
                   بترولايف للشركات
                 </button>
-                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 flex items-center gap-2 justify-end transition-colors hover:bg-foreground/5 rounded-lg ${isLightBackground ? 'text-[#E73A6C]' : 'text-[#FF5C77]'}`}>
+                <button className={`px-6 py-4 text-right text-xl font-normal leading-6 flex items-center gap-2 justify-end transition-colors hover:bg-foreground/5 ${isLightBackground ? 'text-[#E73A6C]' : 'text-[#FF5C77]'}`}>
                   <svg
                     className="w-[18px] h-[18px]"
                     viewBox="0 0 18 18"
@@ -262,12 +262,12 @@ export default function Header() {
 
                 {/* Mobile-only buttons */}
                 <div className="flex flex-col gap-4 pt-8 px-6 border-t border-current/10 mt-8">
-                  <button className={`flex h-14 px-6 justify-center items-center gap-1 rounded-full border transition-colors ${isLightBackground ? 'border-text-primary/30 text-text-primary hover:bg-foreground/5' : 'border-white/50 text-white hover:bg-white/5'}`}>
+                  <button className={`flex h-14 px-6 justify-center items-center gap-1 rounded-lg border transition-colors ${isLightBackground ? 'border-text-primary/30 text-text-primary hover:bg-foreground/5' : 'border-white/50 text-white hover:bg-white/5'}`}>
                     <span className="text-lg font-bold leading-6">
                       تسجيل الدخول
                     </span>
                   </button>
-                  <button className="flex h-14 px-6 justify-center items-center gap-1 rounded-full bg-primary-blue hover:bg-primary-blue/90 transition-colors">
+                  <button className="flex h-14 px-6 justify-center items-center gap-1 rounded-lg bg-primary-blue hover:bg-primary-blue/90 transition-colors">
                     <svg
                       className="w-[18px] h-[18px]"
                       viewBox="0 0 16 16"
@@ -288,14 +288,14 @@ export default function Header() {
                   </button>
                   
                   <div className="flex items-center gap-4 justify-center pt-4">
-                    <button className={`w-14 h-14 rounded-full border flex items-center justify-center transition-colors ${isLightBackground ? 'border-[#34353472] text-text-primary hover:bg-foreground/5' : 'border-[#A9B4BE]/30 text-white hover:bg-white/5'}`}>
+                    <button className={`w-14 h-14 rounded-lg border flex items-center justify-center transition-colors ${isLightBackground ? 'border-[#34353472] text-text-primary hover:bg-foreground/5' : 'border-[#A9B4BE]/30 text-white hover:bg-white/5'}`}>
                       <span className="text-[19.2px] font-normal leading-[28.8px] -mb-2">
                         En
                       </span>
                     </button>
                     <button
                       onClick={toggleDarkMode}
-                      className={`w-14 h-14 rounded-full border flex items-center justify-center transition-colors ${isLightBackground ? 'border-[#34353472] hover:bg-text-primary/5' : 'border-[#A9B4BE]/30 hover:bg-white/5'}`}
+                      className={`w-14 h-14 rounded-lg border flex items-center justify-center transition-colors ${isLightBackground ? 'border-[#34353472] hover:bg-text-primary/5' : 'border-[#A9B4BE]/30 hover:bg-white/5'}`}
                       aria-label={isDarkMode ? "تفعيل الوضع النهاري" : "تفعيل الوضع الليلي"}
                     >
                       {isDarkMode ? (
