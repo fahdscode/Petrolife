@@ -12,7 +12,7 @@ export default function Index() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-[670px] bg-surface-dark flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[500px] md:min-h-[670px] bg-surface-dark flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-93 bg-surface-dark bg-no-repeat bg-center bg-cover"></div>
         <img
           src="https://api.builder.io/api/v1/image/assets/TEMP/8362221a1e91eb061bfc63f8bb4c37c483e0a111?width=2884"
@@ -21,19 +21,19 @@ export default function Index() {
         />
         <div className="absolute inset-0 opacity-93 bg-surface-dark bg-no-repeat bg-center bg-cover"></div>
 
-        <div className="relative z-10 flex flex-col items-center gap-10 px-4 max-w-[714px] text-center mt-20">
-          <div className="flex flex-col items-center gap-7">
-            <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
-              <span className="text-white text-base font-bold leading-6">
+        <div className="relative z-10 flex flex-col items-center gap-6 md:gap-10 px-4 max-w-[714px] text-center mt-20">
+          <div className="flex flex-col items-center gap-4 md:gap-7">
+            <div className="inline-flex px-4 md:px-6 py-2 md:py-3 justify-center items-center gap-2.5 rounded-[40px] bg-white/5 backdrop-blur-[10px]">
+              <span className="text-white text-sm md:text-base font-bold leading-6">
                 النظام التقني الشامل والمتكامل في إدارة إستهلاك الوقود
               </span>
             </div>
 
             <div className="flex flex-col items-center gap-3">
-              <h1 className="text-white text-[28px] md:text-[32px] font-bold leading-10 tracking-[0.25px]">
+              <h1 className="text-white text-[22px] md:text-[28px] lg:text-[32px] font-bold leading-8 md:leading-10 tracking-[0.25px]">
                 بترولايف - "منصة واحدة… رؤية كاملة لاستهلاك الوقود.
               </h1>
-              <p className="text-white text-lg leading-6 tracking-[0.16px]">
+              <p className="text-white text-base md:text-lg leading-6 tracking-[0.16px]">
                 حل تقني متطور يتيح مراقبة دقيقة، تقارير تفاعلية، ورؤية شاملة لإدارة
                 استهلاك الوقود بفعالية،إدارة احترافية لاستهلاك الوقود تضمن
                 الشفافية، الدقة، والتحكم الكامل في الموارد،إدارة ذكية لإستهلاك
@@ -43,9 +43,9 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 flex-wrap justify-center">
-            <button className="flex h-14 px-4 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50">
-              <span className="text-white text-base font-bold leading-6 px-3">
+          <div className="flex items-center gap-3 flex-wrap justify-center w-full">
+            <button className="flex h-12 md:h-14 px-3 md:px-4 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50 flex-1 min-w-[160px] max-w-[200px]">
+              <span className="text-white text-sm md:text-base font-bold leading-6 px-2 md:px-3">
                 اطلب خدمة عاجلة
               </span>
               <svg
@@ -78,9 +78,9 @@ export default function Index() {
               </svg>
             </button>
 
-            <button className="flex h-14 px-4 pl-1.5 justify-between items-center gap-1 rounded-full bg-primary-blue">
+            <button className="flex h-12 md:h-14 px-3 md:px-4 pl-1.5 justify-between items-center gap-1 rounded-full bg-primary-blue flex-1 min-w-[160px] max-w-[200px]">
               <svg
-                className="w-[18px] h-[18px]"
+                className="w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export default function Index() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="text-white text-base font-bold leading-6 px-2">
+              <span className="text-white text-sm md:text-base font-bold leading-6 px-1 md:px-2">
                 حمل التطبيق الآن
               </span>
             </button>
@@ -101,13 +101,13 @@ export default function Index() {
         </div>
 
         {/* WhatsApp Fixed Button */}
-        <div className="fixed bottom-8 left-8 z-50">
+        <div className="fixed bottom-4 md:bottom-8 left-4 md:left-8 z-50">
           <a
             href="https://wa.me/"
-            className="flex w-20 h-20 items-center justify-center rounded-full bg-[#EAFFEC] shadow-lg hover:scale-110 transition-transform"
+            className="flex w-14 h-14 md:w-20 md:h-20 items-center justify-center rounded-full bg-[#EAFFEC] shadow-lg hover:scale-110 transition-transform"
           >
             <svg
-              className="w-[71px] h-[71px]"
+              className="w-[50px] h-[50px] md:w-[71px] md:h-[71px]"
               viewBox="0 0 72 72"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +153,7 @@ export default function Index() {
                 أحصائياتنا
               </span>
             </div>
-            <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
+            <h2 className="text-text-primary text-center text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
               أرقام تتحدث عن ثقتكم بنا
             </h2>
           </div>
@@ -223,9 +223,9 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section className="py-12 px-4 md:px-20 bg-background">
-        <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col items-end gap-10 text-right order-2 md:order-1">
+      <section className="py-8 md:py-12 px-4 md:px-20 bg-background">
+        <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="flex flex-col items-end gap-6 md:gap-10 text-right order-2 md:order-1">
             <div className="flex flex-col items-end gap-7">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-[#4D4D4D]/20 backdrop-blur-[10px] ml-auto">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
@@ -234,7 +234,7 @@ export default function Index() {
               </div>
 
               <div className="flex flex-col items-center gap-3">
-                <h2 className="text-text-primary text-right text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <h2 className="text-text-primary text-right text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                   بترولايف - "منصة واحدة… رؤية كاملة لاستهلاك الوقود.
                 </h2>
                 <p className="text-text-primary text-right text-lg leading-6 tracking-[0.16px]">
@@ -289,8 +289,8 @@ export default function Index() {
             </button>
           </div>
 
-          <div className="relative h-[685px] order-1 md:order-2">
-            <div className="absolute top-14 right-12 w-[420px] h-[560px] rounded-[28px] bg-primary-blue overflow-hidden">
+          <div className="relative h-[300px] md:h-[500px] lg:h-[685px] order-1 md:order-2">
+            <div className="relative md:absolute md:top-14 md:right-12 w-full md:w-[420px] h-full md:h-[560px] rounded-[28px] bg-primary-blue overflow-hidden">
               <img
                 src="https://api.builder.io/api/v1/image/assets/TEMP/0edbe4e279d8f1abdd8e62fdc1abb8756fc53f56?width=1256"
                 alt="Dashboard Preview"
@@ -363,8 +363,8 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 md:px-20 bg-background">
-        <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-12">
+      <section className="py-8 md:py-16 px-4 md:px-20 bg-background">
+        <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-8 md:gap-12">
           <div className="flex flex-col items-center gap-8 max-w-[1096px]">
             <div className="flex flex-col items-center gap-4">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
@@ -372,12 +372,12 @@ export default function Index() {
                   خدماتنــــــــــا
                 </span>
               </div>
-              <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
+              <h2 className="text-text-primary text-center text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                 خدماتنا الشاملة - كل ما تحتاجه في مكان واحد
               </h2>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3.5 justify-center">
+            <div className="flex flex-wrap items-center gap-2 md:gap-3.5 justify-center">
               {[
                 { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
                 { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
@@ -389,15 +389,15 @@ export default function Index() {
                 <button
                   key={service.id}
                   onClick={() => setActiveService(service.id)}
-                  className={`flex h-[52px] px-3 justify-center items-center gap-2.5 rounded-lg transition-all ${
+                  className={`flex h-[44px] md:h-[52px] px-2 md:px-3 justify-center items-center gap-1.5 md:gap-2.5 rounded-lg transition-all ${
                     activeService === service.id
                       ? "bg-primary-blue"
                       : "bg-primary-blue/8"
                   }`}
                 >
-                  <img src={service.icon} alt="" className="w-8 h-8" />
+                  <img src={service.icon} alt="" className="w-6 h-6 md:w-8 md:h-8" />
                   <span
-                    className={`text-lg font-extrabold leading-6 ${
+                    className={`text-sm md:text-lg font-extrabold leading-6 ${
                       activeService === service.id
                         ? "text-white"
                         : "text-text-primary opacity-80"
@@ -411,7 +411,7 @@ export default function Index() {
           </div>
 
           {/* Service Showcase - Dynamic based on activeService */}
-          <div className="w-full h-[335px] rounded-[32px] bg-surface-dark overflow-hidden relative">
+          <div className="w-full h-[250px] md:h-[335px] rounded-[16px] md:rounded-[32px] bg-surface-dark overflow-hidden relative">
             {activeService === "fuel" && (
               <>
                 <img
@@ -419,11 +419,11 @@ export default function Index() {
                   alt="Fuel Delivery"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
-                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <div className="absolute top-6 md:top-16 right-4 md:right-20 max-w-[280px] md:max-w-[324px] flex flex-col items-end gap-4 md:gap-8 text-right">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                     وقودك يصلك أينما كنت!
                   </h3>
-                  <div className="text-white text-lg font-medium leading-[35px]">
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     توصيل جميع أنواع الوقود (95، 91، ديزل)
                     <br />
                     خدمة 24/7 في جميع المناطق
@@ -443,11 +443,11 @@ export default function Index() {
                   alt="Car Wash"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
-                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <div className="absolute top-6 md:top-16 right-4 md:right-20 max-w-[280px] md:max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                     نظافة احترافية لسيارتك!
                   </h3>
-                  <div className="text-white text-lg font-medium leading-[35px]">
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     غسيل داخلي وخارجي شامل
                     <br />
                     استخدام مواد صديقة للبيئة
@@ -467,11 +467,11 @@ export default function Index() {
                   alt="Engine Oil"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-16 right-20 max-w-[354px] flex flex-col items-end gap-8 text-right">
-                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <div className="absolute top-6 md:top-16 right-4 md:right-20 max-w-[280px] md:max-w-[354px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                     عناية فائقة بمحرك سيارتك!
                   </h3>
-                  <div className="text-white text-lg font-medium leading-[35px]">
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     زيوت عالية الجودة من أفضل الماركات
                     <br />
                     تغيير الفلاتر والفحص الشامل
@@ -491,11 +491,11 @@ export default function Index() {
                   alt="Battery Service"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
-                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <div className="absolute top-6 md:top-16 right-4 md:right-20 max-w-[280px] md:max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                     طاقة لا تنضب لسيارتك!
                   </h3>
-                  <div className="text-white text-lg font-medium leading-[35px]">
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     بطاريات أصلية بضمان شامل
                     <br />
                     فحص وتشخيص مجاني
@@ -515,11 +515,11 @@ export default function Index() {
                   alt="Tires Service"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-16 right-20 max-w-[324px] flex flex-col items-end gap-8 text-right">
-                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <div className="absolute top-6 md:top-16 right-4 md:right-20 max-w-[280px] md:max-w-[324px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                     قيادة آمنة على كل الطرق!
                   </h3>
-                  <div className="text-white text-lg font-medium leading-[35px]">
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     إطارات من أشهر الماركات العالمية
                     <br />
                     فحص ضغط الهواء مجاناً
@@ -539,11 +539,11 @@ export default function Index() {
                   alt="Emergency Services"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute top-16 right-20 max-w-[382px] flex flex-col items-end gap-8 text-right">
-                  <h3 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+                <div className="absolute top-6 md:top-16 right-4 md:right-20 max-w-[280px] md:max-w-[382px] flex flex-col items-end gap-8 text-right">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                     نجدتك السريعة في أي وقت!
                   </h3>
-                  <div className="text-white text-lg font-medium leading-[35px]">
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     استجابة خلال 15-30 دقيقة
                     <br />
                     فريق مدرب ومجهز
@@ -597,7 +597,7 @@ export default function Index() {
 
         <div className="max-w-[1196px] mx-auto px-4 flex flex-col items-center gap-10 relative z-10">
           <div className="flex flex-col items-center gap-7 text-center">
-            <h2 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+            <h2 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
               حمّل تطبيقاتنا واستمتع بتجربة لا مثيل لها
             </h2>
 
@@ -668,7 +668,7 @@ export default function Index() {
                   className="flex items-center gap-1 justify-center"
                 >
                   <img src={feature.icon} alt="" className="w-6 h-6" />
-                  <span className="text-white text-lg font-medium leading-[35px]">
+                  <span className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     {feature.text}
                   </span>
                 </div>
@@ -690,7 +690,7 @@ export default function Index() {
                     className="flex items-center gap-1 justify-center"
                   >
                     <img src={feature.icon} alt="" className="w-6 h-6" />
-                  <span className="text-white text-lg font-medium leading-[35px]">
+                  <span className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     {feature.text}
                   </span>
                   </div>
@@ -707,7 +707,7 @@ export default function Index() {
                     className="flex items-center gap-1 justify-center"
                   >
                     <img src={feature.icon} alt="" className="w-6 h-6" />
-                  <span className="text-white text-lg font-medium leading-[35px]">
+                  <span className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     {feature.text}
                   </span>
                   </div>
@@ -731,7 +731,7 @@ export default function Index() {
                   className="flex items-center gap-1 justify-center"
                 >
                   <img src={feature.icon} alt="" className="w-6 h-6" />
-                  <span className="text-white text-lg font-medium leading-[35px]">
+                  <span className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
                     {feature.text}
                   </span>
                 </div>
@@ -791,7 +791,7 @@ export default function Index() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 px-4 md:px-[230px] bg-background">
+      <section className="py-8 md:py-16 px-4 md:px-8 lg:px-[230px] bg-background">
         <div className="max-w-[980px] mx-auto flex flex-col items-center gap-14">
           <div className="flex flex-col items-center gap-7 max-w-[755px]">
             <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
@@ -799,7 +799,7 @@ export default function Index() {
                 FAQ
               </span>
             </div>
-            <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
+            <h2 className="text-text-primary text-center text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
               الأسئلة الأكثر شيوعاً
             </h2>
           </div>
@@ -873,30 +873,30 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 px-4 md:px-20">
-        <div className="max-w-[1280px] mx-auto h-[359px] rounded-[28px] bg-[#7F321A] overflow-hidden relative flex flex-col">
+      <section className="py-8 md:py-12 px-4 md:px-20">
+        <div className="max-w-[1280px] mx-auto h-[300px] md:h-[359px] rounded-[16px] md:rounded-[28px] bg-[#7F321A] overflow-hidden relative flex flex-col">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/19ef58bde84dfa86c78abeecfcea55382c24cb9a?width=2560"
             alt=""
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute top-14 right-20 md:right-[455px] max-w-[755px] flex flex-col items-end gap-11 text-right ml-auto md:mr-[-350px]">
+          <div className="absolute top-8 md:top-14 right-4 md:right-20 lg:right-[455px] max-w-[90%] md:max-w-[755px] flex flex-col items-end gap-6 md:gap-11 text-right ml-auto md:mr-[-350px]">
             <div className="flex flex-col items-end gap-2">
-              <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-white/20 backdrop-blur-[10px] ml-auto">
-                <span className="text-white text-base font-bold leading-6 opacity-60">
+              <div className="inline-flex px-4 md:px-6 py-2 md:py-3 justify-center items-center gap-2.5 rounded-[40px] border border-white/20 backdrop-blur-[10px] ml-auto">
+                <span className="text-white text-sm md:text-base font-bold leading-6 opacity-60">
                   انضم إلينا الآن
                 </span>
               </div>
-              <h2 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
+              <h2 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
                 انضم إلى شبكة بترولايف واربح معنا
               </h2>
-              <p className="text-white text-xl font-medium leading-7">
+              <p className="text-white text-base md:text-xl font-medium leading-6 md:leading-7">
                 كن شريكاً في منصة الخدمات الأسوع نمواً في المنطقة
               </p>
             </div>
 
-            <button className="flex h-14 px-4 pr-1.5 items-center gap-3 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.4)] ml-auto">
-              <div className="w-11 h-11 rounded-full bg-[#7F321A]/5 flex items-center justify-center">
+            <button className="flex h-12 md:h-14 px-3 md:px-4 pr-1.5 items-center gap-2 md:gap-3 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.4)] ml-auto">
+              <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-[#7F321A]/5 flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
                   viewBox="0 0 16 16"
@@ -919,7 +919,7 @@ export default function Index() {
                   />
                 </svg>
               </div>
-              <span className="text-brand-orange-dark text-base font-bold leading-6">
+              <span className="text-brand-orange-dark text-sm md:text-base font-bold leading-6">
                 انضم إلينا الآن
               </span>
             </button>
@@ -928,7 +928,7 @@ export default function Index() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-[136px] px-4 md:px-40 bg-background">
+      <section className="py-12 md:py-20 lg:py-[136px] px-4 md:px-8 lg:px-40 bg-background">
         <div className="max-w-full flex flex-col gap-15">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 mb-15">
             <div className="flex flex-col items-end gap-7">
@@ -937,7 +937,7 @@ export default function Index() {
                   تواصل معنا
                 </span>
               </div>
-              <h2 className="text-text-primary text-right text-[28px] font-bold leading-10 tracking-[0.25px] max-w-[422px]">
+              <h2 className="text-text-primary text-right text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px] max-w-[422px]">
                 تواصل معنا - نحن هنا لمساعدتك!
               </h2>
             </div>
