@@ -318,8 +318,8 @@ export default function Index() {
               <span className="font-medium">الشفافية</span>: تقديم بيانات دقيقة
               وتقارير واضحة لدعم اتخاذ القرار.
               <br />
-              <span className="font-medium">الابتكار</span>: تطوير حلول ��قنية متقدمة
-              تل��ي احتياجات العملاء المتغيرة.
+              <span className="font-medium">الابتكار</span>: تطوير حلول تقنية متقدمة
+              تلبي احتياجات العملاء المتغيرة.
               <br />
               <span className="font-medium">الاستدامة</span>: تقليل الهدر والحد من
               التلاعب.
@@ -341,7 +341,7 @@ export default function Index() {
                 </h3>
               </div>
               <p className="text-text-primary text-lg leading-6 text-right">
-                نهدف إلى تحويل إدارة الوقود إلى عملية ذكية وفعالة ��عزز كفاءة
+                نهدف إلى تحويل إدارة الوقود إلى عملية ذكية وفعالة تعزز كفاءة
                 الأساطيل وتدعم القرارات الاستراتيجية.
               </p>
             </div>
@@ -369,7 +369,7 @@ export default function Index() {
             <div className="flex flex-col items-center gap-4">
               <div className="inline-flex px-6 py-3 justify-center items-center gap-2.5 rounded-[40px] border border-foreground/20 backdrop-blur-[10px]">
                 <span className="text-text-primary text-base font-bold leading-6 opacity-60">
-                  خ��ماتنــــــــــا
+                  خدماتنــــــــــا
                 </span>
               </div>
               <h2 className="text-text-primary text-center text-[28px] font-bold leading-10 tracking-[0.25px]">
@@ -598,7 +598,7 @@ export default function Index() {
         <div className="max-w-[1196px] mx-auto px-4 flex flex-col items-center gap-10 relative z-10">
           <div className="flex flex-col items-center gap-7 text-center">
             <h2 className="text-white text-[28px] font-bold leading-10 tracking-[0.25px]">
-              حمّل تطبيقاتنا واستمتع بتجرب�� لا مثيل لها
+              حمّل تطبيقاتنا واستمتع بتجربة لا مثيل لها
             </h2>
 
             <div className="flex flex-wrap items-center justify-center gap-3.5">
@@ -658,7 +658,7 @@ export default function Index() {
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
                 { text: "واجهة سهلة و متجاوبة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/1f5d56a2a691101aae2481f9322df779fe8895b3?width=48" },
-                { text: "ط��ب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
+                { text: "طلب الخدمات بضغطة واحدة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/aafb6fe84693103d7e7baf1311d61e9460512f22?width=48" },
                 { text: "تتبع الطلب لحظة بلحظة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/4d70ee1fd880c733997472e7c1c1e3f574662593?width=48" },
                 { text: "نظام دفع آمن ومرن", icon: "https://api.builder.io/api/v1/image/assets/TEMP/5c93a2890b7beb7220236eb2ca1430403356534e?width=48" },
                 { text: "عروض وخصومات حصرية", icon: "https://api.builder.io/api/v1/image/assets/TEMP/436398af1f391fccd11d3b37d564a743a96a45eb?width=48" },
