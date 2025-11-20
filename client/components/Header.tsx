@@ -25,9 +25,13 @@ export default function Header() {
       <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1348px] px-4">
         <div className={`flex items-center justify-between gap-[26px] rounded-full border backdrop-blur-sm px-3.5 py-2.5 transition-colors ${isLightBackground ? 'border-foreground/10 bg-foreground/[0.04]' : 'border-white/10 bg-white/[0.04]'}`}>
           {/* Right side - Logo */}
-          <div className="flex items-center gap-1">
-            <div className={`text-xl font-bold transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>بترولايف</div>
-          </div>
+          <Link to="/" className="flex items-center gap-1" aria-label="الصفحة الرئيسية">
+            <img 
+              src="/logo.png" 
+              alt="شعار بترولايف" 
+              className="h-8 w-auto object-contain"
+            />
+          </Link>
 
           {/* Center - Navigation */}
           <nav className="hidden lg:flex items-start gap-[2px]">
