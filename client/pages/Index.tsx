@@ -2,11 +2,14 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RatingCarousel from "@/components/RatingCarousel";
+import SavingsCalculator from "@/components/SavingsCalculator";
+import JoinCompanyModal from "@/components/JoinCompanyModal";
 
 export default function Index() {
   const [activeService, setActiveService] = useState("fuel");
   const [activeFaq, setActiveFaq] = useState(0);
   const [activeAppTab, setActiveAppTab] = useState<"individuals" | "companies" | "providers">("individuals");
+  const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-background">
@@ -558,6 +561,8 @@ export default function Index() {
         </div>
       </section>
 
+      <SavingsCalculator />
+
       {/* Mobile Apps Section */}
       <section className="pt-16 pb-0 bg-[#10132C] relative overflow-hidden min-h-[752px]">
         {/* Background Decorative Lines */}
@@ -921,7 +926,10 @@ export default function Index() {
               </p>
             </div>
 
-            <button className="flex h-12 md:h-14 px-3 md:px-4 pr-1.5 items-center gap-2 md:gap-3 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.4)] ml-auto">
+            <button
+              onClick={() => setIsJoinModalOpen(true)}
+              className="flex h-12 md:h-14 px-3 md:px-4 pr-1.5 items-center gap-2 md:gap-3 rounded-full bg-white shadow-[0_0_20px_rgba(0,0,0,0.4)] ml-auto"
+            >
               <div className="w-9 h-9 md:w-11 md:h-11 rounded-full bg-[#7F321A]/5 flex items-center justify-center">
                 <svg
                   className="w-4 h-4"
@@ -1055,6 +1063,7 @@ export default function Index() {
       </section>
 
       <Footer />
+      <JoinCompanyModal isOpen={isJoinModalOpen} onClose={() => setIsJoinModalOpen(false)} />
     </div>
   );
 }
