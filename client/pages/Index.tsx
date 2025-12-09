@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import RatingCarousel from "@/components/RatingCarousel";
 
 export default function Index() {
   const [activeService, setActiveService] = useState("fuel");
@@ -104,7 +105,7 @@ export default function Index() {
         <div className="fixed bottom-4 md:bottom-8 left-4 md:left-8 z-50">
           <a
             href="https://wa.me/"
-            className="flex w-14 h-14 md:w-20 md:h-20 items-center justify-center rounded-full bg-[#EAFFEC] shadow-lg hover:scale-110 transition-transform"
+            className="flex w-14 h-14 md:w-20 md:h-20 items-center justify-center rounded-full bg-[#EAFFEC] shadow-[0_0_20px_rgba(37,211,102,0.6)] hover:shadow-[0_0_30px_rgba(37,211,102,0.8)] hover:scale-110 transition-all duration-300"
           >
             <svg
               className="w-[50px] h-[50px] md:w-[71px] md:h-[71px]"
@@ -811,6 +812,9 @@ export default function Index() {
           )}
         </div>
       </section>
+
+
+      <RatingCarousel />
 
       {/* FAQ Section */}
       <section className="py-8 md:py-16 px-4 md:px-8 lg:px-[230px] bg-background">
