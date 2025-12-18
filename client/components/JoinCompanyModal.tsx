@@ -28,12 +28,11 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
 
                         {/* Logo */}
                         <div className="mb-6">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="48" height="48" rx="12" fill="#5A66C1" />
-                                <path d="M24 12C17.3726 12 12 17.3726 12 24C12 30.6274 17.3726 36 24 36C30.6274 36 36 30.6274 36 24C36 17.3726 30.6274 12 24 12ZM24 33C19.0294 33 15 28.9706 15 24C15 19.0294 19.0294 15 24 15C28.9706 15 33 19.0294 33 24C33 28.9706 28.9706 33 24 33Z" fill="white" fillOpacity="0.2" />
-                                <path d="M30 18H22C19.7909 18 18 19.7909 18 22V30" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                                <path d="M26 30H30C32.2091 30 34 28.2091 34 26V22C34 19.7909 32.2091 18 30 18Z" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                            </svg>
+                            <img
+                                src="/logo-modal.png"
+                                alt="Petrolife Logo"
+                                className="h-12 w-auto dark:brightness-0 dark:invert transition-all duration-300"
+                            />
                         </div>
 
                         <Dialog.Title className="text-2xl font-bold text-center mb-10 text-[#1F2937]">
