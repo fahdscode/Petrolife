@@ -47,13 +47,13 @@ export default function Index() {
             </div>
           </div>
 
-          <div className="flex items-center gap-3 flex-wrap justify-center w-full">
-            <button className="flex h-12 md:h-14 px-3 md:px-4 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50 flex-1 min-w-[160px] max-w-[200px]">
-              <span className="text-white text-sm md:text-base font-bold leading-6 px-2 md:px-3">
+          <div className="flex flex-col md:flex-row items-center gap-3 justify-center w-full">
+            <button className="flex py-4 md:py-5 px-6 md:px-8 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50 flex-1 min-w-[200px] max-w-[280px]">
+              <span className="text-white text-base md:text-lg font-bold leading-6 px-2 md:px-3">
                 اطلب خدمة عاجلة
               </span>
               <svg
-                className="w-[18px] h-[18px]"
+                className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
                 viewBox="0 0 18 18"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,9 +82,9 @@ export default function Index() {
               </svg>
             </button>
 
-            <button className="flex h-12 md:h-14 px-3 md:px-4 pl-1.5 justify-between items-center gap-1 rounded-full bg-primary-blue flex-1 min-w-[160px] max-w-[200px]">
+            <button className="flex py-4 md:py-5 px-6 md:px-8 pl-1.5 justify-between items-center gap-1 rounded-full bg-primary-blue flex-1 min-w-[200px] max-w-[280px]">
               <svg
-                className="w-[16px] h-[16px] md:w-[18px] md:h-[18px]"
+                className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ export default function Index() {
                   strokeLinejoin="round"
                 />
               </svg>
-              <span className="text-white text-sm md:text-base font-bold leading-6 px-1 md:px-2">
+              <span className="text-white text-base md:text-lg font-bold leading-6 px-1 md:px-2">
                 حمل التطبيق الآن
               </span>
             </button>
@@ -381,7 +381,7 @@ export default function Index() {
               </h2>
             </div>
 
-            <div className="flex flex-wrap items-center gap-2 md:gap-3.5 justify-center">
+            <div className="flex flex-row md:flex-wrap items-center gap-2 md:gap-3.5 overflow-x-auto md:overflow-visible w-full md:w-auto px-4 md:px-0 justify-start md:justify-center pb-4 md:pb-0 snap-x [direction:ltr] md:[direction:rtl]">
               {[
                 { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
                 { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
@@ -393,7 +393,7 @@ export default function Index() {
                 <button
                   key={service.id}
                   onClick={() => setActiveService(service.id)}
-                  className={`flex h-[44px] md:h-[52px] px-2 md:px-3 justify-center items-center gap-1.5 md:gap-2.5 rounded-lg transition-all ${activeService === service.id
+                  className={`flex h-[44px] md:h-[52px] px-2 md:px-3 justify-center items-center gap-1.5 md:gap-2.5 rounded-lg transition-all shrink-0 snap-center [direction:rtl] ${activeService === service.id
                     ? "bg-primary-blue"
                     : "bg-primary-blue/8"
                     }`}
@@ -564,7 +564,7 @@ export default function Index() {
       <SavingsCalculator />
 
       {/* Mobile Apps Section */}
-      <section className="pt-16 pb-0 bg-[#10132C] relative overflow-hidden min-h-[752px]">
+      <section className="pt-16 pb-0 bg-[#10132C] relative overflow-hidden min-h-[752px] flex flex-col">
         {/* Background Decorative Lines */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Horizontal gradient lines */}
@@ -599,7 +599,7 @@ export default function Index() {
           <div className="w-full h-full rounded-full bg-[#F4430C] blur-[190px]" />
         </div>
 
-        <div className="max-w-[1196px] mx-auto px-4 flex flex-col items-center gap-10 relative z-10">
+        <div className="max-w-[1196px] mx-auto px-4 flex flex-col items-center gap-10 relative z-10 flex-1 w-full">
           <div className="flex flex-col items-center gap-7 text-center">
             <h2 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
               حمّل تطبيقاتنا واستمتع بتجربة لا مثيل لها
@@ -787,7 +787,7 @@ export default function Index() {
           </div>
 
           {activeAppTab === "individuals" && (
-            <div className="w-full max-w-[1200px] mt-4 fade-in">
+            <div className="w-full max-w-[1200px] mt-auto pt-[25px] fade-in">
               <img
                 src="/individuals-app-preview.png"
                 alt="App Preview"
@@ -797,7 +797,7 @@ export default function Index() {
           )}
 
           {activeAppTab === "companies" && (
-            <div className="w-full max-w-[1200px] mt-4 fade-in">
+            <div className="w-full max-w-[1500px] mt-auto pt-[25px] fade-in">
               <img
                 src="/companies-app-preview.png"
                 alt="App Preview"
@@ -807,7 +807,7 @@ export default function Index() {
           )}
 
           {activeAppTab === "providers" && (
-            <div className="w-full max-w-[1200px] mt-4 fade-in">
+            <div className="w-full max-w-[1200px] mt-auto pt-[25px] fade-in">
               <img
                 src="/providers-app-preview.png"
                 alt="App Preview"
