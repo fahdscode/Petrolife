@@ -17,7 +17,13 @@ export default function SavingsCalculator() {
         driverSalary: "",
     });
     const [isOpen, setIsOpen] = useState(false);
-    const [savings, setSavings] = useState(0);
+    const [results, setResults] = useState({
+        annualSavings: 0,
+        dailyFuelSaved: 0,
+        extraJobs: 0,
+        workersSaved: 0,
+        fuelLitresSaved: 0,
+    });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -25,14 +31,59 @@ export default function SavingsCalculator() {
     };
 
     const handleCalculate = () => {
-        // Mock Calculation Logic
-        // In a real scenario, use formula based on inputs
-        const baseSavings = 5000;
-        const vehicleFactor = parseInt(formData.vehicleCount) || 1;
-        const estimatedSavings = baseSavings * vehicleFactor;
+        // Constants (Estimated for Saudi Market)
+        const AVG_SPEED_KMH = 30;
+        const FUEL_CONSUMPTION_KM_L = 8;
+        const FUEL_PRICE_SAR = 2.33;
+        const WORKING_DAYS_MONTH = 26;
+        const WORKING_HOURS_DAY = 8;
 
-        setSavings(estimatedSavings);
+        // Inputs
+        const refuelTime = parseFloat(formData.refuelTime) || 0; // minutes
+        const deliveryTime = parseFloat(formData.deliveryTime) || 120; // minutes (avoid div by 0)
+        const distance = parseFloat(formData.distance) || 0; // km
+        const vehicleCount = parseFloat(formData.vehicleCount) || 1;
+        const refuelsPerWeek = parseFloat(formData.refuelsPerWeek) || 0;
+        const driverSalary = parseFloat(formData.driverSalary) || 0;
+
+        // 1. Time Cost Calculation
+        // Round trip time + refueling time
+        const travelTimeMinutes = (distance * 2 / AVG_SPEED_KMH) * 60;
+        const tripTimeMinutes = refuelTime + travelTimeMinutes;
+
+        // Total Annual Time Saved (Hours)
+        const totalAnnualTimeSavedHours = (vehicleCount * refuelsPerWeek * 52 * tripTimeMinutes) / 60;
+
+        // Labor Savings
+        const hourlyRate = driverSalary / (WORKING_DAYS_MONTH * WORKING_HOURS_DAY);
+        const laborSavings = totalAnnualTimeSavedHours * hourlyRate;
+
+        // 2. Fuel Cost Calculation
+        const tripDistanceKm = distance * 2;
+        const totalAnnualDistanceKm = vehicleCount * refuelsPerWeek * 52 * tripDistanceKm;
+        const fuelLitresSaved = totalAnnualDistanceKm / FUEL_CONSUMPTION_KM_L;
+        const fuelCostSavings = fuelLitresSaved * FUEL_PRICE_SAR;
+
+        // 3. Metrics
+        const totalAnnualSavings = laborSavings + fuelCostSavings;
+        const dailyFuelSaved = fuelLitresSaved / 365;
+        const extraJobs = (totalAnnualTimeSavedHours * 60) / deliveryTime;
+        const workersSaved = totalAnnualTimeSavedHours / (WORKING_HOURS_DAY * WORKING_DAYS_MONTH * 12);
+
+        setResults({
+            annualSavings: Math.round(totalAnnualSavings),
+            dailyFuelSaved: Math.round(dailyFuelSaved),
+            extraJobs: Math.round(extraJobs),
+            workersSaved: parseFloat(workersSaved.toFixed(1)),
+            fuelLitresSaved: Math.round(fuelLitresSaved),
+        });
         setIsOpen(true);
+    };
+
+    const formatNumber = (num: number) => {
+        if (num >= 1000000) return (num / 1000000).toFixed(1) + "M";
+        if (num >= 1000) return (num / 1000).toFixed(1) + "k";
+        return num.toString();
     };
 
     return (
@@ -50,53 +101,55 @@ export default function SavingsCalculator() {
 
                     {/* Grid Layout */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        {/* Card 1: Fuel Quantity */}
+                        {/* Card 1: Daily Fuel Saved */}
                         <div className="p-6 bg-[#F9FAFB] dark:bg-white/5 rounded-2xl flex flex-col items-center gap-4 text-center">
-                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">كمية الوقود للمال المدخر</span>
-                            <h3 className="text-[#101828] dark:text-white text-3xl font-bold dir-ltr">140,245 لتر / يوم</h3>
+                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">لتر وقود يومياً</span>
+                            <h3 className="text-[#101828] dark:text-white text-3xl font-bold dir-ltr">
+                                {formatNumber(results.dailyFuelSaved)} L
+                            </h3>
                             <div className="flex items-center gap-2 text-[#027A48] text-sm font-medium bg-[#ECFDF3] px-3 py-1 rounded-full">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 11L11 1M11 1H3M11 1V9" stroke="#12B76A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                1.2M سنويا
+                                {formatNumber(results.fuelLitresSaved)} L سنوياً
                             </div>
                         </div>
 
                         {/* Card 2: Annual Savings */}
                         <div className="p-6 bg-[#F9FAFB] dark:bg-white/5 rounded-2xl flex flex-col items-center gap-4 text-center">
-                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">التوفير السنوي</span>
+                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">الادخار السنوي</span>
                             <h3 className="text-[#101828] dark:text-white text-3xl font-bold text-right dir-rtl">
-                                140,245 <span className="text-xl">﷼</span>
+                                {formatNumber(results.annualSavings)} <span className="text-xl">ر.س</span>
                             </h3>
                             <div className="flex items-center gap-2 text-[#2E90FA] text-sm font-medium bg-[#EFF8FF] px-3 py-1 rounded-full">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 11L11 1M11 1H3M11 1V9" stroke="#2E90FA" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                1.5% + شهريا
+                                وبذلك يتم توفير {formatNumber(Math.round(results.annualSavings / 12))} ر.س شهرياً
                             </div>
                         </div>
 
-                        {/* Card 3: Drivers */}
+                        {/* Card 3: Workers Equivalent */}
                         <div className="p-6 bg-[#F9FAFB] dark:bg-white/5 rounded-2xl flex flex-col items-center gap-4 text-center">
-                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">تشغيل السائقين</span>
-                            <h3 className="text-[#101828] dark:text-white text-3xl font-bold">24 سائق</h3>
+                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">عمال مشغولين</span>
+                            <h3 className="text-[#101828] dark:text-white text-3xl font-bold">{results.workersSaved} عامل</h3>
                             <div className="flex items-center gap-2 text-[#7A5AF8] text-sm font-medium bg-[#F9F5FF] px-3 py-1 rounded-full">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 11L11 1M11 1H3M11 1V9" stroke="#7A5AF8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                1.5% + نسبة الزيادة
+                                يمكنك توظيفهم عبر التكاليف التي وفرتها
                             </div>
                         </div>
 
-                        {/* Card 4: Time Gained */}
+                        {/* Card 4: Extra Jobs */}
                         <div className="p-6 bg-[#F9FAFB] dark:bg-white/5 rounded-2xl flex flex-col items-center gap-4 text-center">
-                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">الوقت المكتسب</span>
-                            <h3 className="text-[#101828] dark:text-white text-3xl font-bold dir-rtl">4.2 K ساعة / عام</h3>
+                            <span className="text-[#475467] dark:text-gray-300 text-base font-medium">وظيفة إضافية</span>
+                            <h3 className="text-[#101828] dark:text-white text-3xl font-bold dir-rtl">{formatNumber(results.extraJobs)} وظيفة</h3>
                             <div className="flex items-center gap-2 text-[#F04438] text-sm font-medium bg-[#FEF3F2] px-3 py-1 rounded-full">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M1 11L11 1M11 1H3M11 1V9" stroke="#F04438" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                356 ساعة / مركبة
+                                من خلال توفير وقت التزود بالوقود
                             </div>
                         </div>
                     </div>
@@ -180,7 +233,7 @@ export default function SavingsCalculator() {
                                             name={item.name}
                                             value={formData[item.name as keyof typeof formData]}
                                             onChange={handleChange}
-                                            placeholder="100"
+                                            placeholder="0"
                                             className="w-full h-12 md:h-14 bg-[#F2F4F7] dark:bg-white/5 rounded-xl px-4 text-right text-text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary-blue/20 transition-all placeholder:text-text-secondary/50"
                                         />
 
