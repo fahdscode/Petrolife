@@ -67,7 +67,10 @@ export default function Header() {
             <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
               بترولايف للشركات
             </button>
-            <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-1 pb-1 transition-colors ${isLightBackground ? 'text-[#E73A6C]' : 'text-[#FF5C77]'}`}>
+            <Link
+              to="/rapid-rescue"
+              className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-1 pb-1 transition-colors ${isLightBackground ? 'text-[#E73A6C]' : 'text-[#FF5C77]'}`}
+            >
               <span>الإنقاذ السريع</span>
               <svg
                 className="w-[18px] h-[18px]"
@@ -97,7 +100,7 @@ export default function Header() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </Link>
           </nav>
 
           {/* Left side - Actions */}
