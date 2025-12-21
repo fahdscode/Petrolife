@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="toy-train">
+<path id="Vector" d="M5.25002 15C6.07845 15 6.75002 14.3284 6.75002 13.5C6.75002 12.6716 6.07845 12 5.25002 12C4.42159 12 3.75002 12.6716 3.75002 13.5C3.75002 14.3284 4.42159 15 5.25002 15Z" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M12.75 15C13.5784 15 14.25 14.3284 14.25 13.5C14.25 12.6716 13.5784 12 12.75 12C11.9216 12 11.25 12.6716 11.25 13.5C11.25 14.3284 11.9216 15 12.75 15Z" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M1.50002 3H9.75002" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M4.5 6H6" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M11.25 9.375H11.625" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M2.25 3V12C2.25 12.3488 2.25 12.5231 2.28833 12.6662C2.39236 13.0544 2.6956 13.3577 3.08383 13.4617C3.22689 13.5 3.40126 13.5 3.75 13.5M9 13.5V3" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M6.75 13.5H11.25" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_8" d="M9 7.5H12.6453C13.6683 7.5 13.9156 7.70273 14.1162 8.70585C14.1891 9.07065 14.1279 9.3495 14.5059 9.3798C15.1372 9.4305 15.5804 9.8544 15.8182 10.409C16.1593 11.2052 16.5 11.8743 16.5 12.75C16.5 13.1036 16.5 13.2803 16.3902 13.3902C16.2803 13.5 16.1035 13.5 15.75 13.5H14.25" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_9" d="M12 7.5V5.25M12 5.25H11.25M12 5.25H12.75" stroke="var(--stroke-0, white)" stroke-width="1.125" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
