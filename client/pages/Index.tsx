@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import RatingCarousel from "@/components/RatingCarousel";
@@ -48,39 +49,41 @@ export default function Index() {
           </div>
 
           <div className="flex flex-col md:flex-row items-center gap-3 justify-center w-full">
-            <button className="flex py-4 md:py-5 px-6 md:px-8 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50 flex-1 min-w-[200px] max-w-[280px]">
-              <span className="text-white text-base md:text-lg font-bold leading-6 px-2 md:px-3">
-                اطلب خدمة عاجلة
-              </span>
-              <svg
-                className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
-                viewBox="0 0 18 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M5.25 15C6.07843 15 6.75 14.3284 6.75 13.5C6.75 12.6716 6.07843 12 5.25 12C4.42157 12 3.75 12.6716 3.75 13.5C3.75 14.3284 4.42157 15 5.25 15Z"
-                  stroke="#FF5C77"
-                  strokeWidth="1.125"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M12.75 15C13.5784 15 14.25 14.3284 14.25 13.5C14.25 12.6716 13.5784 12 12.75 12C11.9216 12 11.25 12.6716 11.25 13.5C11.25 14.3284 11.9216 15 12.75 15Z"
-                  stroke="#FF5C77"
-                  strokeWidth="1.125"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M9 7.5H12.6453C13.6683 7.5 13.9156 7.70272 14.1162 8.70585C14.1891 9.07065 14.1279 9.3495 14.5059 9.3798C15.1372 9.4305 15.5804 9.8544 15.8182 10.409C16.1593 11.2052 16.5 11.8743 16.5 12.75C16.5 13.1035 16.5 13.2803 16.3902 13.3902C16.2803 13.5 16.1035 13.5 15.75 13.5H14.25"
-                  stroke="#FF5C77"
-                  strokeWidth="1.125"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
+            <Link to="/rapid-rescue" className="flex items-center justify-center flex-1 min-w-[200px] max-w-[280px]">
+              <button className="flex w-full py-4 md:py-5 px-6 md:px-8 pr-1.5 justify-between items-center gap-1 rounded-full border border-white/50">
+                <span className="text-white text-base md:text-lg font-bold leading-6 px-2 md:px-3">
+                  اطلب خدمة عاجلة
+                </span>
+                <svg
+                  className="w-[20px] h-[20px] md:w-[24px] md:h-[24px]"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.25 15C6.07843 15 6.75 14.3284 6.75 13.5C6.75 12.6716 6.07843 12 5.25 12C4.42157 12 3.75 12.6716 3.75 13.5C3.75 14.3284 4.42157 15 5.25 15Z"
+                    stroke="#FF5C77"
+                    strokeWidth="1.125"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M12.75 15C13.5784 15 14.25 14.3284 14.25 13.5C14.25 12.6716 13.5784 12 12.75 12C11.9216 12 11.25 12.6716 11.25 13.5C11.25 14.3284 11.9216 15 12.75 15Z"
+                    stroke="#FF5C77"
+                    strokeWidth="1.125"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9 7.5H12.6453C13.6683 7.5 13.9156 7.70272 14.1162 8.70585C14.1891 9.07065 14.1279 9.3495 14.5059 9.3798C15.1372 9.4305 15.5804 9.8544 15.8182 10.409C16.1593 11.2052 16.5 11.8743 16.5 12.75C16.5 13.1035 16.5 13.2803 16.3902 13.3902C16.2803 13.5 16.1035 13.5 15.75 13.5H14.25"
+                    stroke="#FF5C77"
+                    strokeWidth="1.125"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </Link>
 
             <button className="flex py-4 md:py-5 px-6 md:px-8 pl-1.5 justify-between items-center gap-1 rounded-full bg-primary-blue flex-1 min-w-[200px] max-w-[280px]">
               <svg
