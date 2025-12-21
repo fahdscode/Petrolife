@@ -15,7 +15,7 @@ export default function RatingCarousel() {
             id: 1,
             name: "هشام موسى",
             role: "المدير التنفيذي لشركة المرشدي",
-            image: "https://api.builder.io/api/v1/image/assets/TEMP/06f7df20-802c-47ce-b6b6-545236894563?apiKey=f56a5c10-09e4-47b3-8c43-1563720760a9&", // Placeholder - closely matching the vibe if possible or generic
+            image: "https://api.builder.io/api/v1/image/assets/TEMP/06f7df20-802c-47ce-b6b6-545236894563?apiKey=f56a5c10-09e4-47b3-8c43-1563720760a9&",
             rating: 5,
             text: "ساعدت شركتي على التوفير في الخدمات المتعلقة بالوقود وخدمات السيارات عموما ، كنت أعاني في البداية من إدارة أسطول شركتي ، لكني الآن أستطيع إدارة كامل المركبات من مكان واحد.",
         },
@@ -42,6 +42,30 @@ export default function RatingCarousel() {
             image: "https://api.builder.io/api/v1/image/assets/TEMP/06f7df20-802c-47ce-b6b6-545236894563?apiKey=f56a5c10-09e4-47b3-8c43-1563720760a9&",
             rating: 5,
             text: "تجربة رائعة مع بترولايف. التطبيق سهل جداً للسائقين والوحة التحكم تعطيني كل المعلومات اللي أحتاجها لاتخاذ القرارات.",
+        },
+        {
+            id: 5,
+            name: "منيره",
+            role: "مديرة تشغيل",
+            image: "https://api.builder.io/api/v1/image/assets/TEMP/06f7df20-802c-47ce-b6b6-545236894563?apiKey=f56a5c10-09e4-47b3-8c43-1563720760a9&",
+            rating: 5,
+            text: "وفر علينا وقت وجهد كبير. بدل ما نعتمد على التخمين صارت الأرقام قدامنا. وهذا فرق معنا كثير بالإدارة.",
+        },
+        {
+            id: 6,
+            name: "محمد شبير",
+            role: "سائق نقل ثقيل",
+            image: "https://api.builder.io/api/v1/image/assets/TEMP/06f7df20-802c-47ce-b6b6-545236894563?apiKey=f56a5c10-09e4-47b3-8c43-1563720760a9&",
+            rating: 4,
+            text: "أنا سواق . أستخدم التطبيق هذا كل يوم. التطبيق سهل مرة. محطات منتشرة في كل مكان . قبل في مشاكل، الحين كل شي سهل واستغنيت عن الدفع كاش ومشاويير للإدارة . بس ياليت تضيفو خدمات اكثر شكرا لكم.",
+        },
+        {
+            id: 7,
+            name: "عبدالله الحربي",
+            role: "مدير قطاع نقل",
+            image: "https://api.builder.io/api/v1/image/assets/TEMP/06f7df20-802c-47ce-b6b6-545236894563?apiKey=f56a5c10-09e4-47b3-8c43-1563720760a9&",
+            rating: 5,
+            text: "صراحة بعد استخدام النظام لاحظنا فرق واضح في استهلاك الوقود. التقارير دقيقة وساعدتنا نعرف وين الهدر اللي ما كنا منتبهين له.",
         },
     ];
 
@@ -90,7 +114,7 @@ export default function RatingCarousel() {
 
                                             <div className="flex items-center gap-1">
                                                 <span className="text-[#FF5C00] text-xl font-bold font-[Segoe UI]">
-                                                    5/5
+                                                    {item.rating}/5
                                                 </span>
                                                 <Star className="w-5 h-5 fill-[#FF5C00] text-[#FF5C00]" />
                                             </div>
