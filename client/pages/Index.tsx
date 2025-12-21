@@ -173,20 +173,20 @@ export default function Index() {
                 },
                 {
                   icon: "⭐",
-                  value: "98%",
+                  value: "95%",
                   label: "رضا العملاء",
                   color: "#E76500",
                 },
                 {
                   icon: "🏢",
-                  value: "+1,000",
+                  value: "+100",
                   label: "شركة تثق بنا",
                   color: "#00C950",
                 },
                 {
                   icon: "⛽",
-                  value: "+200",
-                  label: "مزود خدمة معتمد",
+                  value: "+2000",
+                  label: "نقطة خدمه ",
                   color: "#EE3939",
                 },
                 {
@@ -381,14 +381,15 @@ export default function Index() {
               </h2>
             </div>
 
-            <div className="flex flex-row md:flex-wrap items-center gap-2 md:gap-3.5 overflow-x-auto md:overflow-visible w-full md:w-auto px-4 md:px-0 justify-start md:justify-center pb-4 md:pb-0 snap-x [direction:ltr] md:[direction:rtl]">
+            <div className="flex flex-row md:flex-nowrap items-center gap-2 md:gap-3.5 overflow-x-auto md:overflow-visible w-full md:w-auto px-4 md:px-0 justify-start md:justify-center pb-4 md:pb-0 snap-x md:snap-none [direction:ltr] md:[direction:rtl]">
               {[
-                { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
-                { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
-                { id: "battery", label: "البطاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
-                { id: "oil", label: "زيت المحرك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/d402ee0bf2af625acfc280bd518f04606e6cfe02?width=64" },
-                { id: "wash", label: "غسيل السيارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/c8921cf59e30692d035957d47a3a9b7062ddb0d8?width=64" },
+                { id: "fuel_near", label: "وقود بالقرب منك", icon: "/fuel-near-you-icon.png" },
                 { id: "fuel", label: "توصيل الوقود", icon: "https://api.builder.io/api/v1/image/assets/TEMP/7f9995a3c1ebb648345eeed678a751df28910608?width=64" },
+                { id: "wash", label: "غسيل السيارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/c8921cf59e30692d035957d47a3a9b7062ddb0d8?width=64" },
+                { id: "oil", label: "زيت المحرك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/d402ee0bf2af625acfc280bd518f04606e6cfe02?width=64" },
+                { id: "battery", label: "البطاريات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/9452797c385ef30aa3cb2dcc17a9e6d119475836?width=64" },
+                { id: "tires", label: "الإطارات", icon: "https://api.builder.io/api/v1/image/assets/TEMP/691ecd2874538f537e57ca461d9d604c060b278c?width=64" },
+                { id: "emergency", label: "خدمات الطوارئ", icon: "https://api.builder.io/api/v1/image/assets/TEMP/edb428b95f4a310b84e588f0728170ecd99a7564?width=64" },
               ].map((service) => (
                 <button
                   key={service.id}
@@ -553,6 +554,35 @@ export default function Index() {
                     حلول فورية للأعطال البسيطة
                     <br />
                     خدمة القطر عند الحاجة
+                  </div>
+                </div>
+              </>
+            )}
+
+            {activeService === "fuel_near" && (
+              <>
+                <img
+                  src="/fuel-near-you-mobile.png"
+                  alt="Fuel Near You"
+                  className="w-full h-full object-cover md:hidden"
+                />
+                <img
+                  src="/fuel-near-you.png"
+                  alt="Fuel Near You"
+                  className="hidden md:block w-full h-full object-cover"
+                />
+                <div className="absolute top-6 left-0 right-0 mx-auto md:left-auto md:right-20 md:mx-0 md:top-16 max-w-[280px] md:max-w-[324px] flex flex-col items-center text-center md:items-end md:text-right gap-4 md:gap-8">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
+                    وقودنا وخدماتنا بجانبك!
+                  </h3>
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
+                    معرفة محطاتنا القريبة من موقعك.
+                    <br />
+                    خدمة منتشرة بكل مكان.
+                    <br />
+                    خدماتنا بجانبك أينما كنت.
+                    <br />
+                    شبكة محطات خدمة واسعة تغطي تنقلاتك.
                   </div>
                 </div>
               </>

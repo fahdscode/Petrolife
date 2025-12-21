@@ -23,7 +23,7 @@ export function useScrollBackground() {
 
       // Check which section is currently in view
       for (const section of sections) {
-        const element = document.querySelector(section.selector);
+        const element = document.querySelector(section.selector) as HTMLElement;
         if (element) {
           const rect = element.getBoundingClientRect();
           const sectionTop = element.offsetTop;

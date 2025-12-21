@@ -2,6 +2,9 @@ import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Switch from "@radix-ui/react-switch";
 import { X, Upload, Building2, Ticket, MapPin, Mail, Lock, FileText, Phone } from "lucide-react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
+import { auth, db } from "../firebaseConfig";
 
 interface JoinCompanyModalProps {
     isOpen: boolean;
@@ -10,6 +13,60 @@ interface JoinCompanyModalProps {
 
 export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalProps) {
     const [attachLater, setAttachLater] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+    const [formData, setFormData] = useState({
+        companyName: "",
+        brandName: "",
+        phone: "",
+        city: "",
+        address: "",
+        commercialRecord: "",
+        taxId: "",
+        email: "",
+        password: ""
+    });
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const handleRegister = async () => {
+        setError("");
+        setLoading(true);
+
+        try {
+            // 1. Create User in Firebase Authentication
+            const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
+            const user = userCredential.user;
+
+            // 2. Create Company Document in Firestore
+            await setDoc(doc(db, "companies", user.uid), {
+                uid: user.uid,
+                companyName: formData.companyName,
+                brandName: formData.brandName,
+                phone: formData.phone,
+                city: formData.city,
+                address: formData.address,
+                commercialRecord: formData.commercialRecord,
+                taxId: formData.taxId,
+                email: formData.email,
+                createdAt: new Date(),
+                status: "pending_verification" // Optional: status field
+            });
+
+            console.log("Account created successfully!");
+            onClose();
+        } catch (err: any) {
+            console.error("Error creating account:", err);
+            setError(err.message || "An error occurred while creating the account.");
+        } finally {
+            setLoading(false);
+        }
+    };
 
     return (
         <Dialog.Root open={isOpen} onOpenChange={onClose}>
@@ -35,15 +92,24 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             />
                         </div>
 
-                        <Dialog.Title className="text-2xl font-bold text-center mb-10 text-[#1F2937]">
+                        <Dialog.Title className="text-2xl font-bold text-center mb-5 text-[#1F2937]">
                             انضم إلينا الآن واستمتع بإدارة شركتك الآن.
                         </Dialog.Title>
+
+                        {error && (
+                            <div className="w-full mb-5 p-3 text-red-600 bg-red-100 rounded-lg text-right rtl" dir="rtl">
+                                {error}
+                            </div>
+                        )}
 
                         {/* Form Fields */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full mb-8 rtl" dir="rtl">
                             <div className="relative">
                                 <input
                                     type="text"
+                                    name="companyName"
+                                    value={formData.companyName}
+                                    onChange={handleChange}
                                     placeholder="اسم الشركة"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -53,6 +119,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="text"
+                                    name="brandName"
+                                    value={formData.brandName}
+                                    onChange={handleChange}
                                     placeholder="اسم العلامة التجارية"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -62,6 +131,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="text"
+                                    name="phone"
+                                    value={formData.phone}
+                                    onChange={handleChange}
                                     placeholder="رقم الهاتف"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -70,9 +142,12 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
 
                             <div className="relative">
                                 <select
+                                    name="city"
+                                    value={formData.city}
+                                    onChange={handleChange}
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 appearance-none bg-white text-gray-400"
                                 >
-                                    <option value="" disabled selected>المدينة</option>
+                                    <option value="" disabled>المدينة</option>
                                     <option value="adh-dammam" className="text-gray-700">الدمام</option>
                                     <option value="riyadh" className="text-gray-700">الرياض</option>
                                     <option value="jeddah" className="text-gray-700">جدة</option>
@@ -83,6 +158,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="text"
+                                    name="address"
+                                    value={formData.address}
+                                    onChange={handleChange}
                                     placeholder="العنوان بالتفصيل"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -92,6 +170,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="text"
+                                    name="commercialRecord"
+                                    value={formData.commercialRecord}
+                                    onChange={handleChange}
                                     placeholder="السجل التجاري"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -101,6 +182,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="text"
+                                    name="taxId"
+                                    value={formData.taxId}
+                                    onChange={handleChange}
                                     placeholder="الرقم الضريبي"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -110,6 +194,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     placeholder="البريد الإلكتروني"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -119,6 +206,9 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
                             <div className="relative">
                                 <input
                                     type="password"
+                                    name="password"
+                                    value={formData.password}
+                                    onChange={handleChange}
                                     placeholder="تعيين كلمة المرور"
                                     className="w-full h-14 pr-4 pl-12 rounded-2xl border border-gray-200 outline-none focus:border-[#5A66C1] focus:ring-1 focus:ring-[#5A66C1] transition-all text-right text-gray-700 placeholder:text-gray-400"
                                 />
@@ -163,8 +253,12 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
 
                         {/* Footer Actions */}
                         <div className="w-full flex items-center justify-between rtl" dir="rtl">
-                            <button className="h-[56px] px-8 bg-[#5A66C1] hover:bg-[#48519A] text-white text-lg font-bold rounded-full transition-colors">
-                                إنشاء حساب شركات
+                            <button
+                                onClick={handleRegister}
+                                disabled={loading}
+                                className="h-[56px] px-8 bg-[#5A66C1] hover:bg-[#48519A] text-white text-lg font-bold rounded-full transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                {loading ? "جاري الإنشاء..." : "إنشاء حساب شركات"}
                             </button>
 
                             <div className="flex items-center gap-2">
