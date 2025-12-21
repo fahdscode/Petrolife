@@ -22,7 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-          blue: "#5A66C1",
+          blue: "#2C346C",
           purple: "#6C32A9",
           orange: "#E76500",
           green: "#00C950",
@@ -61,7 +61,7 @@ export default {
           secondary: "hsl(var(--text-secondary))",
           placeholder: "hsl(var(--text-placeholder))",
           green: "#00C950",
-          blue: "#5A66C1",
+          blue: "#2C346C",
           negative: "#FFF",
         },
         brand: {
