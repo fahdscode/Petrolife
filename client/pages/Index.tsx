@@ -230,7 +230,7 @@ export default function Index() {
       </section>
 
       {/* About Section */}
-      <section className="py-8 md:py-12 px-4 md:px-20 bg-background">
+      <section id="about" className="py-8 md:py-12 px-4 md:px-20 bg-background">
         <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="flex flex-col items-end gap-6 md:gap-10 text-right order-2 md:order-1">
             <div className="flex flex-col items-end gap-7">
@@ -370,7 +370,7 @@ export default function Index() {
       </section>
 
       {/* Services Section */}
-      <section className="py-8 md:py-16 px-4 md:px-20 bg-background">
+      <section id="services" className="py-8 md:py-16 px-4 md:px-20 bg-background">
         <div className="max-w-[1280px] mx-auto flex flex-col items-center gap-8 md:gap-12">
           <div className="flex flex-col items-center gap-8 max-w-[1096px]">
             <div className="flex flex-col items-center gap-4">
@@ -597,7 +597,7 @@ export default function Index() {
       <SavingsCalculator />
 
       {/* Mobile Apps Section */}
-      <section className="pt-16 pb-0 bg-[#10132C] relative overflow-hidden min-h-[752px] flex flex-col">
+      <section id="apps" className="pt-16 pb-0 bg-[#10132C] relative overflow-hidden min-h-[752px] flex flex-col">
         {/* Background Decorative Lines */}
         <div className="absolute inset-0 pointer-events-none">
           {/* Horizontal gradient lines */}

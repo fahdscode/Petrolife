@@ -2,11 +2,27 @@ import { Link } from "react-router-dom";
 import { useDarkMode } from "@/hooks/use-dark-mode";
 import { useScrollBackground } from "@/hooks/use-scroll-background";
 import { useState, useEffect } from "react";
+import { useScrollSpy } from "@/hooks/use-scroll-spy";
 
 export default function Header() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const { isLightBackground } = useScrollBackground();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Use scroll spy to track active section
+  const activeSection = useScrollSpy(['about', 'services', 'apps'], 100);
+
+  // Helper to get link class based on active state and background
+  const getLinkClass = (sectionId: string) => {
+    const isActive = activeSection === sectionId;
+    const baseClass = "px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-0 transition-colors";
+
+    if (isActive) {
+      return `${baseClass} ${isLightBackground ? 'text-[#E73A6C] font-bold' : 'text-[#FF5C77] font-bold'}`;
+    }
+
+    return `${baseClass} ${isLightBackground ? 'text-text-primary hover:text-primary-blue' : 'text-white hover:text-[#4DB1FF]'}`;
+  };
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -37,17 +53,17 @@ export default function Header() {
           <nav className="hidden lg:flex items-start gap-[2px]">
             <Link
               to="/"
-              className={`px-2.5 py-2.5 text-center text-base font-bold leading-6 transition-colors ${isLightBackground ? 'text-primary-blue' : 'text-[#4DB1FF]'}`}
+              className={`px-2.5 py-2.5 text-center text-base font-bold leading-6 transition-colors ${activeSection === '' ? (isLightBackground ? 'text-primary-blue' : 'text-[#4DB1FF]') : (isLightBackground ? 'text-text-primary hover:text-primary-blue' : 'text-white hover:text-[#4DB1FF]')}`}
             >
               الرئيسية
             </Link>
-            <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-0 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+            <a href="/#about" className={getLinkClass('about')}>
               <span>عنا</span>
-            </button>
-            <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-0 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+            </a>
+            <a href="/#services" className={getLinkClass('services')}>
               <span>خدماتنا</span>
               <svg
-                className="w-4 h-4"
+                className={`w-4 h-4 ml-0.5 ${activeSection === 'services' ? '' : 'opacity-80'}`}
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,16 +76,16 @@ export default function Header() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
-            <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+            </a>
+            <a href="/#apps" className={getLinkClass('apps')}>
               تطبيقاتنا
-            </button>
-            <button className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 transition-colors ${isLightBackground ? 'text-text-primary' : 'text-white'}`}>
+            </a>
+            <a href="/#apps" className={getLinkClass('apps')}>
               بترولايف للشركات
-            </button>
+            </a>
             <Link
               to="/rapid-rescue"
-              className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-1 pb-1 transition-colors ${isLightBackground ? 'text-[#E73A6C]' : 'text-[#FF5C77]'}`}
+              className={`px-2.5 py-2.5 text-center text-base font-normal leading-6 flex items-center gap-1 pb-1 transition-colors ${isLightBackground ? 'text-[#E73A6C] hover:opacity-80' : 'text-[#FF5C77] hover:opacity-80'}`}
             >
               <span>الإنقاذ السريع</span>
               <svg
@@ -232,19 +248,19 @@ export default function Header() {
                 >
                   الرئيسية
                 </Link>
-                <button className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground">
+                <a href="/#about" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground block w-full">
                   عنا
-                </button>
-                <button className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground">
+                </a>
+                <a href="/#services" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground block w-full">
                   خدماتنا
-                </button>
-                <button className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground">
+                </a>
+                <a href="/#apps" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground block w-full">
                   تطبيقاتنا
-                </button>
-                <button className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground">
+                </a>
+                <a href="/#apps" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-4 text-right text-xl font-normal leading-6 transition-colors hover:bg-foreground/5 text-foreground block w-full">
                   بترولايف للشركات
-                </button>
-                <button className="px-6 py-4 text-right text-xl font-normal leading-6 flex items-center gap-2 justify-end transition-colors hover:bg-foreground/5 text-[#FF5C77]">
+                </a>
+                <Link to="/rapid-rescue" onClick={() => setIsMobileMenuOpen(false)} className="px-6 py-4 text-right text-xl font-normal leading-6 flex items-center gap-2 justify-end transition-colors hover:bg-foreground/5 text-[#FF5C77]">
                   <svg
                     className="w-[18px] h-[18px]"
                     viewBox="0 0 18 18"
@@ -274,7 +290,7 @@ export default function Header() {
                     />
                   </svg>
                   <span>الإنقاذ السريع</span>
-                </button>
+                </Link>
 
                 {/* Mobile-only buttons */}
                 <div className="flex flex-col gap-4 pt-8 px-6 border-t border-current/10 mt-8">
