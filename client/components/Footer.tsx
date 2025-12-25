@@ -72,6 +72,9 @@ export default function Footer() {
               </h3>
               <div className="flex flex-col items-start gap-1.5 opacity-80">
                 <span className="text-text-primary text-sm leading-[22.4px]">
+                  وقود بالقرب منك
+                </span>
+                <span className="text-text-primary text-sm leading-[22.4px]">
                   توصيل الوقود
                 </span>
                 <span className="text-text-primary text-sm leading-[22.4px]">

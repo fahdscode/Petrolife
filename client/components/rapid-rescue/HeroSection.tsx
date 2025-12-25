@@ -1,22 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { CarFront } from "lucide-react";
 
 interface HeroSectionProps {
     onOrderClick: () => void;
 }
 
+const heroImages = [
+    "/hero-slides/slide1.png",
+    "/hero-slides/slide2.png",
+    "/hero-slides/slide3.png",
+    "/hero-slides/slide4.png",
+    "/hero-slides/slide5.png",
+];
+
 const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
+    const [currentImage, setCurrentImage] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentImage((prev) => (prev + 1) % heroImages.length);
+        }, 5000);
+        return () => clearInterval(timer);
+    }, []);
+
     return (
         <section className="relative h-[600px] w-full flex items-center justify-center overflow-hidden bg-[#12171C]">
             {/* Background Image/Overlay */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 h-full w-full">
                 {/* Dark radial gradient to mimic the spotlight effect */}
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#1d232a] via-[#12171C] to-[#12171C]" />
 
-                {/* Subtle patterned background or noise usage if available, for now using a dark overlay over a generic tech/car bg to match the 'isometric' vibe if possible, otherwise keeping it clean dark */}
-                <div className="absolute inset-0 opacity-10 bg-[url('/hero-bg.png')] bg-cover bg-center mix-blend-overlay" />
+                {/* Slideshow */}
+                <AnimatePresence mode="popLayout">
+                    <motion.div
+                        key={currentImage}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.2 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 1 }}
+                        className="absolute inset-0 bg-cover bg-center mix-blend-overlay"
+                        style={{ backgroundImage: `url('${heroImages[currentImage]}')` }}
+                    />
+                </AnimatePresence>
             </div>
 
             <div className="container relative z-10 px-4 text-center">
@@ -40,8 +67,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
 
                     {/* Subheadline */}
                     <p className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed">
-                        في موقف طارئ؟ سواء نفذ الوقود، أو تعطلت بطاريتك - فريق الإنقاذ السريع من بترولايف جاهز للوصول إليك خلال دقائق، أينما كنت.
-                    </p>
+في موقف طارئ؟ سواء نفد الوقود أو تعطّلت بطاريتك – فريق الإنقاذ السريع من بترولايف جاهز للوصول إليك خلال دقائق، أينما كنت.                    </p>
+
 
                     {/* CTA Button */}
                     <div className="pt-6">
@@ -52,6 +79,28 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onOrderClick }) => {
                             <CarFront className="w-6 h-6" />
                             أنقذني الآن
                         </Button>
+                    </div>
+
+                    {/* Slideshow Pagination */}
+                    <div className="flex gap-[6px] items-center justify-center mt-12 z-20 relative">
+                        {heroImages.map((_, index) => (
+                            <motion.div
+                                key={index}
+                                onClick={() => setCurrentImage(index)}
+                                className={`h-[8px] rounded-[100px] cursor-pointer transition-colors duration-300 ${index === currentImage
+                                        ? "bg-[#f2f2f7]/90"
+                                        : "bg-[rgba(217,217,217,0.15)] hover:bg-[rgba(217,217,217,0.3)]"
+                                    }`}
+                                animate={{
+                                    width: index === currentImage ? 67 : 14,
+                                }}
+                                transition={{
+                                    type: "spring",
+                                    stiffness: 300,
+                                    damping: 30,
+                                }}
+                            />
+                        ))}
                     </div>
                 </motion.div>
             </div>
