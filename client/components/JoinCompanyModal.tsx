@@ -2,9 +2,7 @@ import { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import * as Switch from "@radix-ui/react-switch";
 import { X, Upload, Building2, Ticket, MapPin, Mail, Lock, FileText, Phone } from "lucide-react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
-import { auth, db } from "../firebaseConfig";
+import { createCompanyUserFunction } from "../lib/firebaseFunctions";
 
 interface JoinCompanyModalProps {
     isOpen: boolean;
@@ -39,27 +37,39 @@ export default function JoinCompanyModal({ isOpen, onClose }: JoinCompanyModalPr
         setLoading(true);
 
         try {
-            // 1. Create User in Firebase Authentication
-            const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
-            const user = userCredential.user;
+            // Validate required fields
+            if (!formData.email || !formData.password || !formData.companyName || 
+                !formData.brandName || !formData.phone || !formData.city || !formData.address) {
+                setError("Please fill in all required fields.");
+                setLoading(false);
+                return;
+            }
 
-            // 2. Create Company Document in Firestore
-            await setDoc(doc(db, "companies", user.uid), {
-                uid: user.uid,
-                companyName: formData.companyName,
-                brandName: formData.brandName,
-                phone: formData.phone,
-                city: formData.city,
-                address: formData.address,
-                commercialRecord: formData.commercialRecord,
-                taxId: formData.taxId,
+            // Call the Cloud Function to create user and company
+            const result = await createCompanyUserFunction({
                 email: formData.email,
-                createdAt: new Date(),
-                status: "pending_verification" // Optional: status field
+                password: formData.password,
+                name: formData.companyName,
+                brandName: formData.brandName,
+                phoneNumber: formData.phone,
+                address: formData.address,
+                city: formData.city,
+                vatNumber: formData.taxId || undefined,
+                commercialRegistrationNumber: formData.commercialRecord || undefined,
+                // Optional fields - can be added later when file upload is implemented
+                logo: undefined,
+                taxCertificate: undefined,
+                commercialRegistration: undefined,
+                addressFile: undefined,
+                formattedLocation: undefined,
             });
 
-            console.log("Account created successfully!");
-            onClose();
+            if (result.success) {
+                console.log("Account created successfully!", result);
+                onClose();
+            } else {
+                setError(result.error || result.message || "An error occurred while creating the account.");
+            }
         } catch (err: any) {
             console.error("Error creating account:", err);
             setError(err.message || "An error occurred while creating the account.");
