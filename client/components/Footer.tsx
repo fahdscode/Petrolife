@@ -8,9 +8,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-10">
           {/* Logo & Description */}
           <div className="flex flex-col items-end gap-4 max-w-[296px]">
-            <div className="flex items-center gap-1">
-              <div className="text-xl font-bold text-right w-auto flex-grow">بترولايف</div>
-            </div>
+            <Link to="/" className="flex items-center gap-1 ml-auto" aria-label="الصفحة الرئيسية">
+              <img
+                src="/logo.png"
+                alt="شعار بترولايف"
+                className="h-8 w-auto object-contain"
+              />
+            </Link>
             <p className="text-text-primary text-sm leading-[22.4px] text-right opacity-75">
               بترولايف منصة متخصصة في إدارة وتتبع استهلاك الوقود، صُممت لتلبية
               احتياجات الشركات والمؤسسات التي تسعى إلى رفع كفاءتها التشغيلية وتقليل
@@ -67,7 +71,7 @@ export default function Footer() {
 
             {/* Services */}
             <div className="flex flex-col items-end gap-4">
-              <h3 className="text-text-primary text-lg font-extrabold opacity-80 ml-auto">
+              <h3 className="text-text-primary text-lg font-extrabold opacity-80 ml-auto ">
                 الخدمات:
               </h3>
               <div className="flex flex-col items-start gap-1.5 opacity-80">
@@ -120,7 +124,7 @@ export default function Footer() {
               </h3>
               <div className="flex items-start gap-6">
                 <a
-                  href="#"
+                  href="https://x.com/petrolife_sa"
                   className="text-text-primary hover:text-primary-blue transition-colors"
                   aria-label="Twitter"
                 >
@@ -137,7 +141,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/petrolife.sa"
                   className="text-text-primary hover:text-primary-blue transition-colors"
                   aria-label="Facebook"
                 >
@@ -154,7 +158,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/petrolife_sa?igsh=dXI0OWVnYW9xZjBt"
                   className="text-text-primary hover:text-primary-blue transition-colors"
                   aria-label="Instagram"
                 >
@@ -171,7 +175,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/petrolife-sa/?originalSubdomain=sa"
                   className="text-text-primary hover:text-primary-blue transition-colors"
                   aria-label="LinkedIn"
                 >
@@ -200,7 +204,9 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 opacity-50">
           <span className="text-text-primary text-sm leading-[22.4px]">
-            سياسة الخصوصية
+            <Link to="/privacy-policy" className="flex items-center gap-1" aria-label="سياسة الخصوصية">
+              سياسة الخصوصية
+            </Link>
           </span>
           <span className="text-text-primary text-sm leading-[22.4px] text-right">
             © جميع الحقوق محفوظة لشركة بترولايف.

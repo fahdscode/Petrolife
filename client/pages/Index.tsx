@@ -7,7 +7,7 @@ import SavingsCalculator from "@/components/SavingsCalculator";
 import JoinCompanyModal from "@/components/JoinCompanyModal";
 
 export default function Index() {
-  const [activeService, setActiveService] = useState("fuel");
+  const [activeService, setActiveService] = useState("fuel_near");
   const [activeFaq, setActiveFaq] = useState(0);
   const [activeAppTab, setActiveAppTab] = useState<"individuals" | "companies" | "providers">("individuals");
   const [isJoinModalOpen, setIsJoinModalOpen] = useState(false);
@@ -418,6 +418,36 @@ export default function Index() {
 
           {/* Service Showcase - Dynamic based on activeService */}
           <div className="w-full h-[250px] md:h-[335px] rounded-[16px] md:rounded-[32px] bg-surface-dark overflow-hidden relative">
+
+            {activeService === "fuel_near" && (
+              <>
+                <img
+                  src="/fuel-near-you-mobile.png"
+                  alt="Fuel Near You"
+                  className="w-full h-full object-cover md:hidden"
+                />
+                <img
+                  src="/fuel-near-you.png"
+                  alt="Fuel Near You"
+                  className="hidden md:block w-full h-full object-cover"
+                />
+                <div className="absolute top-6 left-0 right-0 mx-auto md:left-auto md:right-20 md:mx-0 md:top-16 max-w-[280px] md:max-w-[324px] flex flex-col items-center text-center md:items-end md:text-right gap-4 md:gap-8">
+                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
+                    وقودنا وخدماتنا بجانبك!
+                  </h3>
+                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
+                    معرفة محطاتنا القريبة من موقعك.
+                    <br />
+                    خدمة منتشرة بكل مكان.
+                    <br />
+                    خدماتنا بجانبك أينما كنت.
+                    <br />
+                    شبكة محطات خدمة واسعة تغطي تنقلاتك.
+                  </div>
+                </div>
+              </>
+            )}
+
             {activeService === "fuel" && (
               <>
                 <img
@@ -562,34 +592,7 @@ export default function Index() {
               </>
             )}
 
-            {activeService === "fuel_near" && (
-              <>
-                <img
-                  src="/fuel-near-you-mobile.png"
-                  alt="Fuel Near You"
-                  className="w-full h-full object-cover md:hidden"
-                />
-                <img
-                  src="/fuel-near-you.png"
-                  alt="Fuel Near You"
-                  className="hidden md:block w-full h-full object-cover"
-                />
-                <div className="absolute top-6 left-0 right-0 mx-auto md:left-auto md:right-20 md:mx-0 md:top-16 max-w-[280px] md:max-w-[324px] flex flex-col items-center text-center md:items-end md:text-right gap-4 md:gap-8">
-                  <h3 className="text-white text-[20px] md:text-[28px] font-bold leading-7 md:leading-10 tracking-[0.25px]">
-                    وقودنا وخدماتنا بجانبك!
-                  </h3>
-                  <div className="text-white text-sm md:text-lg font-medium leading-6 md:leading-[35px]">
-                    معرفة محطاتنا القريبة من موقعك.
-                    <br />
-                    خدمة منتشرة بكل مكان.
-                    <br />
-                    خدماتنا بجانبك أينما كنت.
-                    <br />
-                    شبكة محطات خدمة واسعة تغطي تنقلاتك.
-                  </div>
-                </div>
-              </>
-            )}
+
           </div>
         </div>
       </section>
@@ -750,7 +753,7 @@ export default function Index() {
           {activeAppTab === "providers" && (
             <div className="flex flex-wrap items-center justify-center gap-8">
               {[
-                { text: "نمو مستدام لأ��مالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
+                { text: "نمو مستدام لأعمالك", icon: "https://api.builder.io/api/v1/image/assets/TEMP/f44035fa1671627121e92fb889b446df7676293e?width=48" },
                 { text: "دعم تقني شامل", icon: "https://api.builder.io/api/v1/image/assets/TEMP/adfd14b3e71fb484bf332de4f1a2f06f052030a2?width=48" },
                 { text: "تدريب وتأهيل مستمر", icon: "https://api.builder.io/api/v1/image/assets/TEMP/ef59665d154a72f339a582e4618f56dc77da79b9?width=48" },
                 { text: "مدفوعات سريعة وآمنة", icon: "https://api.builder.io/api/v1/image/assets/TEMP/410f0abd96be385b1da9c655977bd001697ae4a0?width=48" },
@@ -874,10 +877,10 @@ export default function Index() {
                 q: "1. كيف يمكنني الإستفاده من خدمات بترولايف؟",
                 a: "يمكنك إنشاء حساب في بترولايف والإستفاده من الخدمات المقدمه من خلال  تطبيق الهواتف الذكيه ،الموقع الإلكتروني ،الإتصال المباشر أو مراسلتنا عن طريق واتساب.  ",
               },
-              { q: "2. كم يستغرق وصول الخدمة؟", a: "نعم يمكنك تعبئة خزان الوقود فل ممتلئ عبر تطبيق بترولايف،كل ما عليك هو طلب تعبئة الوقود من عامل المحطه أولاً ثم  قم بإدخال قرائة العداد أو سعر التعبئه على تطبيق بترولايف إنشئ رمز  QR ثم قم بعرضه على عامل المحطه لإتمام السداد." },
+              { q: "2. هل أستطيع تعبئة خزان الوقود لسيارتي فل عبر تطبيق بترولايف؟", a: "نعم يمكنك تعبئة خزان الوقود فل ممتلئ عبر تطبيق بترولايف،كل ما عليك هو طلب تعبئة الوقود من عامل المحطه أولاً ثم  قم بإدخال قرائة العداد أو سعر التعبئه على تطبيق بترولايف إنشئ رمز  QR ثم قم بعرضه على عامل المحطه لإتمام السداد." },
               { q: "3. بماذا يتميز تطبيق بترولايف؟", a: "يُعد تطبيق ومنصة بترولايف نظامًا تقنيًا متكاملًا لإدارة وترشيد استهلاك الوقود وجميع احتياجات المركبات، حيث يتيح للشركات والأفراد التحكم الكامل في إدارة المركبات ومصاريفها بطريقة تقنية محكمة. كما يمكّن مراكز ومزودي الخدمة من أتمتة عمليات البيع، مع توفير تقارير تفصيلية تسهم في رفع كفاءة التشغيل وزيادة المبيعات." },
               { q: "4. كيف يساعد بترولايف من تقليل هدر الوقود ؟", a: "يساعد بترولايف في تقليل هدر الوقود من خلال المتابعة الدقيقة للاستهلاك، وتنظيم عمليات التزود، وتوفير تقارير تفصيلية تمكّن من اكتشاف أي استخدام غير فعّال واتخاذ قرارات تصحيحية فورية." },
-              { q: "5. هل بترولايف مخصص للشركات فقط ؟", a: "لا، بترولايف مناسب للشركات والأفراد على حد سواء، حيث يوفّر حلولًا مرنة تتكيف مع احتياجات المستخدم سواء لإدارة أسطول مركبات أو مركبة واحدة." },
+              { q: "5. هل بترولايف مخصص للشركات فقط ؟", a: "نعم يمكنك تعبئة خزان الوقود فل ممتلئ عبر تطبيق بترولايف،كل ما عليك هو طلب تعبئة الوقود من عامل المحطه أولاً ثم قم بإدخال قرائة العداد أو سعر التعبئه على تطبيق بترولايف إنشئ رمز  QR ثم قم بعرضه على عامل المحطه لإتمام السداد" },
             ].map((faq, index) => (
               <div
                 key={index}
